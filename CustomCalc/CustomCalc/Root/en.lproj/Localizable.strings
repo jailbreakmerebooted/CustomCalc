@@ -1,0 +1,87 @@
+//TabView
+"Calculator" = "Calculator";
+"Formulary" = "Formulary";
+"Notes" = "Notes";
+"Settings" = "Settings";
+//TabView End
+//Stuff
+"Delete" = "Delete";
+//Stuff End
+//Formulary
+"Shapes" = "Shapes";
+"Bodies" = "Bodies";
+"Changelog" = "Changelog";
+"Update Changelogs" = "Update Changelogs";
+//Formulary End
+//SettingsUI
+"Upperbox" = "Upperbox";
+"Shape" = "Shape";
+"Color and Shadows" = "Color and Shadows";
+"Grid" = "Grid";
+"Haptics and Sound" = "Haptics and Sound";
+"Layouts" = "Layouts";
+"Debug" = "Debug";
+"Credits" = "Credits";
+"Quick Save" = "Quick Save";
+//General SettingsUI
+"Width" = "Width";
+"Height" = "Height";
+"Button" = "Button";
+"Roundness" = "Roundness";
+"Rotation" = "Rotation";
+"Font" = "Font";
+"Border" = "Border";
+"Button Shadow" = "Button Shadow";
+"Shadow Brush" = "Shadow Brush";
+"Font Shadow" = "Font Shadow";
+//Color
+"Color" = "Color";
+"Background" = "Background";
+"Module Background" = "Module Background";
+"Text" = "Text";
+"Text Shadow" = "Text Shadow";
+"Shadow Color" = "Shadow Color";
+"Border Color" = "Border Color";
+"UIColor" = "UIColor";
+//Grid Bundle
+"Grid Items" = "Grid Items";
+"Grid Size" = "Grid Size";
+"Spacing" = "Spacing";
+"Reset Size" = "Reset Size";
+"Edit" = "Edit";
+"Cancel" = "Cancel";
+"Edit Symbols" = "Edit Symbols";
+"Restore Defaults" = "Restore Defaults";
+"Add Symbol" = "Add Symbols";
+"Delete all Symbols" = "Delete all Symbols";
+"Add Numbers" = "Add Numbers";
+"Add Normal Operations" = "Add Normal Operations";
+"Add Sinus Sentence" = "Add Sinus Sentence";
+"Add π" = "Add π";
+//Haptic Bundle
+"Haptic Feedback" = "Haptic Feedback";
+"Sound on Tap" = "Sound on Tap";
+//Stuff 2
+"None" = "None";
+//Picker
+"Light" = "Light";
+"Medium" = "Medium";
+"Heavy" = "Heavy";
+"Soft" = "Soft";
+"Rigid" = "Regid";
+//Layout Stuff
+"Save Layout" = "Save Layout";
+"Save" = "Save";
+"Layout Name" = "Layout Name";
+"Load Layout" = "Load Layout";
+"Import Layout" = "Import Layout";
+"LayoutOptions" = "LayoutOptions";
+//Apply
+"Apply Settings" = "Apply Settings";
+"Apply Color" = "Apply Color";
+"Apply Shape" = "Apply Shape";
+"Apply Grid" = "Apply Grid";
+//General Stuff II
+"Let me test the App" = "Let me test the App";
+"Never show me this again" = "Never Show me this again";
+"Updated" = "Updated";
