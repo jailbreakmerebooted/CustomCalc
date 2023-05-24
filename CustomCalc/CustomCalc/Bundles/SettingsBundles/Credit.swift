@@ -33,6 +33,31 @@ struct Credits: View {
                             .frame(height: 10)
                             .opacity(0)
                         HStack {
+                            Image("mattycbtw")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 80, height: 80)
+                                .cornerRadius(100)
+                            Spacer()
+                            VStack {
+                                Text("Mattycbtw")
+                                Text("Co-Developer")
+                                    .font(.system(size: 10))
+                            }
+                            .frame(width: 200)
+                            Rectangle()
+                                .frame(width: 20)
+                                .opacity(0)
+                        }
+                        Rectangle()
+                            .frame(height: 10)
+                            .opacity(0)
+                    }
+                    VStack {
+                        Rectangle()
+                            .frame(height: 10)
+                            .opacity(0)
+                        HStack {
                             Image("dilan")
                                 .resizable()
                                 .scaledToFit()
@@ -57,3 +82,10 @@ struct Credits: View {
             .navigationTitle("Credits")
         }
 }
+
+// struct Credits_Previews: PreviewProvider {
+    
+//     static var previews: some View {
+//         Credits()
+//     }
+// }
