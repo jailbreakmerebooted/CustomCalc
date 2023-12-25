@@ -196,7 +196,7 @@ struct LayoutST: View {
                                     applyLayout(layout)
                                 }) {
                                     Text(key)
-                                        .foregroundColor(RGBStringToColor(layout.color1 ?? ""))
+                                        .foregroundColor(.primary)
                                 }
                                 .contextMenu {
                                     Button(action: {
