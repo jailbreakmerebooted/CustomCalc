@@ -1,0 +1,92 @@
+//TabView
+"Calculator" = "Laskin";
+"Formulary" = "Kaavat";
+"Notes" = "Muistiinpanot";
+"Settings" = "Asetukset";
+//TabView End
+//Stuff
+"Delete" = "Poista";
+//Stuff End
+//Formulary
+"Shapes" = "Muodot";
+"Bodies" = "Kehot";
+"Changelog" = "Muutosloki";
+"Update Changelogs" = "Päivitä muutokset";
+//Formulary End
+//SettingsUI
+"Upperbox" = "Ylälaatikko";
+"Shape" = "Muoto";
+"Color and Shadows" = "Väri ja varjot";
+"Grid" = "Ruudukko";
+"Haptics and Sound" = "Tuntopalaute ja äänet";
+"Layouts" = "Asettelut";
+"Debug" = "Debuggaus";
+"Credits" = "Kiitokset";
+"Quick Save" = "Tallenna nopeasti";
+//General SettingsUI
+"Width" = "Leveys";
+"Height" = "Korkeus";
+"Button" = "Painike";
+"Roundness" = "Pyöryys";
+"Rotation" = "Pyöriminen";
+"Font" = "Fontti";
+"Border" = "Reuna";
+"Button Shadow" = "Painikkeen varjo";
+"Shadow Brush" = "Varjon koko";
+"Font Shadow" = "Fontin varjo";
+//Color
+"Color" = "Väri";
+"Background" = "Tausta";
+"Module Background" = "Painikkeen tausta";
+"Text" = "Teksti";
+"Text Shadow" = "Tekstin varjo";
+"Shadow Color" = "Varjon väri";
+"Border Color" = "Reunan väri";
+"UIColor" = "Käyttöliittymän väri";
+//Grid Bundle
+"Grid Items" = "Ruudukon tavarat";
+"Grid Size" = "Ruudukon koko";
+"Spacing" = "Välit";
+"Reset Size" = "Nollaa koko";
+"Edit" = "Muokkaa";
+"Cancel" = "Peruuta";
+"Edit Symbols" = "Muokkaa symboleja";
+"Restore Defaults" = "Palauta oletukset";
+"Add Symbol" = "Lisää symboleja";
+"Delete all Symbols" = "Poista kaikki symbolit";
+"Add Numbers" = "Lisää numeroita";
+"Add Normal Operations" = "Lisää normaaleja toimintoja";
+"Add Sinus Sentence" = "Lisää Sinus lause";
+"Add π" = "Lisää π";
+//Haptic Bundle
+"Haptic Feedback" = "Tuntopalaute";
+"Sound on Tap" = "Painallus ääni";
+//Stuff 2
+"None" = "Ei mitään";
+//Picker
+"Light" = "Kevyt";
+"Medium" = "Kohtalainen";
+"Heavy" = "Kova";
+"Soft" = "Pehmeä";
+"Rigid" = "Kankea";
+//Layout Stuff
+"Save Layout" = "Tallenna asettelu";
+"Save" = "Tallenna";
+"Layout Name" = "Asettelun nimi";
+"Load Layout" = "Lataa asettelu";
+"Import Layout" = "Tuo asettelu";
+"LayoutOptions" = "AsettelunAsetukset";
+//Apply
+"Apply Settings" = "Käytä asetuksia";
+"Apply Color" = "Käytä väriä";
+"Apply Shape" = "Käytä muotoa";
+"Apply Grid" = "Käytä ruudukkoa";
+//General Stuff II
+"Let me test the App" = "Anna minun testata sovellusta";
+"Never show me this again" = "Älä näytä tätä uudestaan";
+"Updated" = "Päivitetty";
+"Next" = "Seuraava";
+"Setup" = "Asennus";
+"Duplicate Symbol" = "Monista symboli";
+"Some of the Symbols are allready inside the grid, only unique symbols will be added!" = "Jotkin symbolit ovat valmiiksi ruudukossa, vain yksittäiset symbolit lisätään.";
+"Size" = "Koko";

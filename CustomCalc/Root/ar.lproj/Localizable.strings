@@ -1,0 +1,89 @@
+//TabView
+"Calculator" = "الحاسبة";
+"Formulary" = "المعادلات";
+"Notes" = "الملاحظات";
+"Settings" = "الاعدادات";
+//TabView End
+//Stuff
+"Delete" = "حذف";
+//Stuff End
+//Formulary
+"Shapes" = "الأشكال";
+"Bodies" = "اللوائح";
+"Changelog" = "ملاحظات المطور";
+"Update Changelogs" = "ملاحظات التحديث";
+//Formulary End
+//SettingsUI
+"Upperbox" = "الصندوق العلوي";
+"Shape" = "الشكل";
+"Color and Shadows" = "اللون و الظل";
+"Grid" = "اللوحة";
+"Haptics and Sound" = "الاهتزاز و الصوت";
+"Layouts" = "التخطيطات";
+"Debug" = "خيارات المطور";
+"Credits" = "القائمين على التطبيق";
+"Quick Save" = "حفظ سريع";
+//General SettingsUI
+"Width" = "العرض";
+"Height" = "الطول";
+"Button" = "زر";
+"Roundness" = "نوع الحواف";
+"Rotation" = "الاتجاه";
+"Font" = "الخط";
+"Border" = "الحدود";
+"Button Shadow" = "ظل الزر";
+"Shadow Brush" = "فرشاة الظلال";
+"Font Shadow" = "ظل الخط";
+//Color
+"Color" = "اللون";
+"Background" = "الخلفية";
+"Module Background" = "خلفية الدالة";
+"Text" = "النص";
+"Text Shadow" = "ظل النص";
+"Shadow Color" = "لون الظل";
+"Border Color" = "لون الحدود";
+"UIColor" = "لون واجهة التطبيق";
+//Grid Bundle
+"Grid Items" = "عناصر اللوحة";
+"Grid Size" = "حجم اللوحة";
+"Spacing" = "المسافات";
+"Reset Size" = "اعادة تعيين الحجم";
+"Edit" = "تعديل";
+"Cancel" = "الغاء";
+"Edit Symbols" = "تعديل الرموز";
+"Restore Defaults" = "اعادة تعيين افتراضي";
+"Add Symbol" = "اضافة رموز";
+"Delete all Symbols" = "حذف كل الرموز";
+"Add Numbers" = "اضافة ارقام";
+"Add Normal Operations" = "اضافة عمليات قياسية";
+"Add Sinus Sentence" = "اضافة جملة جيب";
+"Add π" = "اضافة π";
+//Haptic Bundle
+"Haptic Feedback" = "ردود الفعل اللمسية";
+"Sound on Tap" = "الصوت عند النقر";
+//Stuff 2
+"None" = "لا شيء";
+//Picker
+"Light" = "خفيف";
+"Medium" = "متوسط";
+"Heavy" = "ثقيل";
+"Soft" = "ناعم";
+"Rigid" = "خشن";
+//Layout Stuff
+"Save Layout" = "حفظ التخطيط";
+"Save" = "خفظ";
+"Layout Name" = "اسم التخطيط";
+"Load Layout" = "تحميل التخطيط";
+"Import Layout" = "استيراد تخطيط";
+"LayoutOptions" = "خيارات التخطيط";
+//Apply
+"Apply Settings" = "تطبيق الاعدادات";
+"Apply Color" = "تطبيق الالوان";
+"Apply Shape" = "تطبيق الاشكال";
+"Apply Grid" = "تطبيق اللوحة";
+//General Stuff II
+"Let me test the App" = "دعني أجرب التطبيق";
+"Never show me this again" = "لا تظهر هذا مرة أخرى";
+"Updated" = "تم التحديث";
+"Next" = "التالي";
+"Setup" = "الاعداد";

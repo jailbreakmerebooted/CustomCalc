@@ -1,0 +1,96 @@
+//TabView
+"Calculator" = "Taschenrechner";
+"Formulary" = "Formelsammlung";
+"Notes" = "Notizen";
+"Settings" = "Einstellungen";
+//TabView End
+//Stuff
+"Delete" = "Löschen";
+//Stuff End
+//Formulary
+"Shapes" = "Figuren";
+"Bodies" = "Körper";
+"Changelog" = "Änderungsverlauf";
+"Update Changelogs" = "Änderungsverlauf";
+//Formulary End
+//SettingsUI
+"Upperbox" = "Obere Box";
+"Shape" = "Form";
+"Color and Shadows" = "Farben und Schatten";
+"Grid" = "Gitter";
+"Haptics and Sound" = "Haptik und Geräusche";
+"Layouts" = "Layouts";
+"Debug" = "Entwickleroptionen";
+"Credits" = "Dankesagungen";
+"Quick Save" = "Kurz Speichern";
+//General SettingsUI
+"Width" = "Breite";
+"Height" = "Höhe";
+"Button" = "Knöpfe";
+"Roundness" = "Rundigkeit";
+"Rotation" = "Rotation";
+"Font" = "Schrift";
+"Border" = "Rand";
+"Button Shadow" = "Knopf Schatten";
+"Shadow Brush" = "Schattendichte";
+"Font Shadow" = "Schriftschatten";
+"Opacity" = "Durchsichtigkeit";
+"Size" = "Größe";
+//Color
+"Color" = "Farben";
+"Background" = "Hintergrund";
+"Module Background" = "Module Hintergrund";
+"Text" = "Text Farbe";
+"Text Shadow" = "Text Schatten";
+"Shadow Color" = "Schatten";
+"Border Color" = "Rand";
+"UIColor" = "UI";
+//Grid Bundle
+"Grid Items" = "Gitter Elemente";
+"Grid Size" = "Gitter Größe";
+"Spacing" = "Abstand";
+"Reset Size" = "Werte Zurücksetzen";
+"Edit" = "Bearbeiten";
+"Cancel" = "Abbrechen";
+"Edit Symbols" = "Symbole bearbeiten";
+"Restore Defaults" = "Zurücksetzen auf Standards";
+"Add Symbol" = "Symbol hinzufügen";
+"Delete all Symbols" = "Alle Symbole löschen";
+"Add Numbers" = "Nummern hinzufügen";
+"Add Normal Operations" = "Normale Operationen hinzufügen";
+"Add trigonometry functions" = "trigonometry functionen hinzufügen";
+"Add π" = "π hinzufügen";
+//Haptic Bundle
+"Haptic Feedback" = "Haptisches Feedback";
+"Sound on Tap" = "Geräusch beim antippen";
+//Stuff 2
+"None" = "Aus";
+//Picker
+"Light" = "Leicht";
+"Medium" = "Mittel";
+"Heavy" = "Hard";
+"Soft" = "Sanft";
+"Rigid" = "Steif";
+//Layout Stuff
+"Save Layout" = "Layout Speichern";
+"Save" = "Save";
+"Layout Name" = "Layout Name";
+"Load Layout" = "Layout Laden";
+"Import Layout" = "Layout Importieren";
+"LayoutOptions" = "Layout Optionen";
+//Apply
+"Apply Settings" = "Änderrungseinstellungen";
+"Apply Color" = "Farbe ändern";
+"Apply Shape" = "Form ändern";
+"Apply Grid" = "Gitter ändern";
+//General Stuff II
+"Let me test the App" = "Lass mich die App testen";
+"Never show me this again" = "Nie wieder anzeigen";
+"Updated" = "Aktualisiert";
+"Next" = "Weiter";
+"Setup" = "Einrichtung";
+"Duplicate Symbol" = "Duplizierte Symbole";
+"Some of the Symbols are allready inside the grid, only unique symbols will be added!" = "Einige Symbole sind schon im Gitter, nur unikatische Symbole werden hinzugefügt.";
+"Gestures" = "Gestiken";
+"To copy items into history you need to press on the outputbox on calculator" = "Um Ergebnisse und Zahlen hier rein zu kopieren, drücke auf die Ausgabebox auf dem Taschenrechner";
+"History" = "Verlauf";

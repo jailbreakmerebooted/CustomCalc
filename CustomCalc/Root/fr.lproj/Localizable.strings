@@ -1,0 +1,100 @@
+//TabView
+"Calculator" = "Calculatrice";
+"Formulary" = "Formulaire";
+"Notes" = "Notes";
+"Settings" = "Paramètres";
+//TabView End
+
+//Stuff
+"Delete" = "Supprimer";
+//Stuff End
+
+//Formulary
+"Shapes" = "Formes";
+"Bodies" = "Corps";
+"Changelog" = "Journal des modifications";
+"Update Changelogs" = "Mettre à jour les journaux de modification";
+//Formulary End
+
+//SettingsUI
+"Upperbox" = "Boîte supérieure";
+"Shape" = "Forme";
+"Color and Shadows" = "Couleur et ombres";
+"Grid" = "Grille";
+"Haptics and Sound" = "Retour haptique et son";
+"Layouts" = "Mises en page";
+"Debug" = "Déboguer";
+"Credits" = "Crédits";
+"Quick Save" = "Sauvegarde rapide";
+//General SettingsUI
+"Width" = "Largeur";
+"Height" = "Hauteur";
+"Button" = "Bouton";
+"Roundness" = "Arrondi";
+"Rotation" = "Rotation";
+"Font" = "Police de caractères";
+"Border" = "Bordure";
+"Button Shadow" = "Ombre du bouton";
+"Shadow Brush" = "Pinceau d'ombre";
+"Font Shadow" = "Ombre du texte";
+
+//Color
+"Color" = "Couleur";
+"Background" = "Arrière-plan";
+"Module Background" = "Arrière-plan du module";
+"Text" = "Texte";
+"Text Shadow" = "Ombre du texte";
+"Shadow Color" = "Couleur de l'ombre";
+"Border Color" = "Couleur de la bordure";
+"UIColor" = "UIColor";
+
+//Grid Bundle
+"Grid Items" = "Éléments de la grille";
+"Grid Size" = "Taille de la grille";
+"Spacing" = "Espacement";
+"Reset Size" = "Réinitialiser la taille";
+"Edit" = "Modifier";
+"Cancel" = "Annuler";
+"Edit Symbols" = "Modifier les symboles";
+"Restore Defaults" = "Restaurer les valeurs par défaut";
+"Add Symbol" = "Ajouter des symboles";
+"Delete all Symbols" = "Supprimer tous les symboles";
+"Add Numbers" = "Ajouter des chiffres";
+"Add Normal Operations" = "Ajouter des opérations normales";
+"Add Sinus Sentence" = "Ajouter une phrase sinus";
+"Add π" = "Ajouter π";
+
+//Haptic Bundle
+"Haptic Feedback" = "Retour haptique";
+"Sound on Tap" = "Son lors de l'appui";
+
+//Stuff 2
+"None" = "Aucun";
+
+//Picker
+"Light" = "Léger";
+"Medium" = "Moyen";
+"Heavy" = "Fort";
+"Soft" = "Doux";
+"Rigid" = "Rigide";
+
+//Layout Stuff
+"Save Layout" = "Enregistrer la disposition";
+"Save" = "Enregistrer";
+"Layout Name" = "Nom de la disposition";
+"Load Layout" = "Charger la disposition";
+"Import Layout" = "Importer la disposition";
+"LayoutOptions" = "Options de disposition";
+
+//Apply
+"Apply Settings" = "Appliquer les paramètres";
+"Apply Color" = "Appliquer la couleur";
+"Apply Shape" = "Appliquer la forme";
+"Apply Grid" = "Appliquer la grille";
+
+//General Stuff II
+"Let me test the App" = "Laissez-moi tester l'application";
+"Never show me this again" = "Ne plus me montrer cela";
+"Updated" = "Mis à jour";
+"Next" = "Suivant";
+"Setup" = "Configuration";

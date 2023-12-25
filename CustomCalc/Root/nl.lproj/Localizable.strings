@@ -1,0 +1,91 @@
+//TabView
+"Calculator" = "Rekenmachine";
+"Formulary" = "Formulary";
+"Notes" = "Notities";
+"Settings" = "Instellingen";
+//TabView End
+//Stuff
+"Delete" = "Verwijderen";
+//Stuff End
+//Formulary
+"Shapes" = "vormen";
+"Bodies" = "Lichamen";
+"Changelog" = "Wijzigingenlijst";
+"Update Changelogs" = "Update Changelogs";
+//Formulary End
+//SettingsUI
+"Upperbox" = "Upperbox";
+"Shape" = "Vorm";
+"Color and Shadows" = "Kleur en schaduwen";
+"Grid" = "Grid";
+"Haptics and Sound" = "Haptics and Sound";
+"Layouts" = "Layouts";
+"Debug" = "Debug";
+"Credits" = "Credits";
+"Quick Save" = "Snel opslaan";
+//General SettingsUI
+"Width" = "Breedte";
+"Height" = "Hoogte";
+"Button" = "knop";
+"Roundness" = "Roundness";
+"Rotation" = "Rotatie";
+"Font" = "Lettertype";
+"Border" = "Rand";
+"Button Shadow" = "Button Shadow";
+"Shadow Brush" = "Shadow Brush";
+"Font Shadow" = "Font Shadow";
+//Color
+"Color" = "Kleur";
+"Background" = "Achtergrond";
+"Module Background" = "Module Background";
+"Text" = "Text";
+"Text Shadow" = "Text Shadow";
+"Shadow Color" = "Schaduw kleur";
+"Border Color" = "Rand kleur";
+"UIColor" = "UIColor";
+//Grid Bundle
+"Grid Items" = "Grid Items";
+"Grid Size" = "Grid Size";
+"Spacing" = "Spacing";
+"Reset Size" = "Reset Size";
+"Edit" = "Bewerken";
+"Cancel" = "Annuleren";
+"Edit Symbols" = "Symbolen bewerken";
+"Restore Defaults" = "Standaardinstellingen herstellen";
+"Add Symbol" = "Symbolen toevoegen";
+"Delete all Symbols" = "Verwijder alle symbolen";
+"Add Numbers" = "Nummers toevoegen";
+"Add Normal Operations" = "Add Normal Operations";
+"Add Sinus Sentence" = "Add Sinus Sentence";
+"Add π" = "Add π";
+//Haptic Bundle
+"Haptic Feedback" = "Haptic Feedback";
+"Sound on Tap" = "Sound on Tap";
+//Stuff 2
+"None" = "None";
+//Picker
+"Light" = "Light";
+"Medium" = "Medium";
+"Heavy" = "Heavy";
+"Soft" = "Soft";
+"Rigid" = "Regid";
+//Layout Stuff
+"Save Layout" = "Save Layout";
+"Save" = "Save";
+"Layout Name" = "Layout Name";
+"Load Layout" = "Load Layout";
+"Import Layout" = "Import Layout";
+"LayoutOptions" = "LayoutOptions";
+//Apply
+"Apply Settings" = "Instellingen toepassen";
+"Apply Color" = "Kleur toepassen";
+"Apply Shape" = "Vorm toepassen";
+"Apply Grid" = "Apply Grid";
+//General Stuff II
+"Let me test the App" = "Laat me de app testen";
+"Never show me this again" = "Laat me dit nooit meer zien";
+"Updated" = "Updated";
+"Next" = "Volgende";
+"Setup" = "Setup";
+//6.0
+"Size" = "grootte";
