@@ -31,49 +31,18 @@ struct ColorSettings: View {
     @Binding var round_btn12_2: Int
     @Binding var fontName: String
     @Binding var selectedEmoji: String
-    @State private var height_calc_button_geo: CGFloat = 0
-    @State private var width_calc_button_geo: CGFloat = 0
-    @State private var font_size_geo: CGFloat = 0
-    @State private var border_geo: CGFloat = 0
     @Binding var font_size2_1: CGFloat
     @Binding var font_size2_2: Int
     @Binding var xemo: CGFloat
     @Binding var yemo: CGFloat
+    @State private var height_calc_button_geo: CGFloat = 0
+    @State private var width_calc_button_geo: CGFloat = 0
+    @State private var font_size_geo: CGFloat = 0
+    @State private var border_geo: CGFloat = 0
     var body: some View {
         List {
             Section {
-                ZStack {
-                    Rectangle()
-                        .opacity(0)
-                        .frame(height: 250)
-                        .overlay {
-                            ZStack {
-                                Rectangle()
-                                    .frame(width: width_calc_button, height: height_calc_button)
-                                    .cornerRadius(round_btn)
-                                    .shadow(color: selcolor4.opacity(shadow_opacity_1), radius: shadow1, x: shadow_pos_x, y: shadow_pos_y)
-                                    .foregroundColor(color_border)
-                                    .rotationEffect(Angle(degrees: rotate_btn))
-                                
-                                Text("")
-                                    .frame(width: width_calc_button - width_border, height: height_calc_button - width_border)
-                                    .background(selcolor)
-                                    .foregroundColor(selcolor2)
-                                    .cornerRadius(round_btn)
-                                    .rotationEffect(Angle(degrees: rotate_btn))
-                                Text(selectedEmoji)
-                                    .font(.system(size: font_size2_1))
-                                    .offset(x: xemo, y: yemo)
-                                    .rotationEffect(Angle(degrees: rotate_btn))
-                                Text("0")
-                                    .foregroundColor(selcolor2)
-                                    .font(.custom(fontName, size: font_size))
-                                    .rotationEffect(Angle(degrees: rotate_btn + round_btn12))
-                                    .shadow(color: selcolor5.opacity(shadow_opacity_1), radius: shadow2, x: 0, y: 0)
-                            }
-                        }
-                    
-                }
+                preview_box(width_calc_button: $width_calc_button, height_calc_button: $height_calc_button, selcolor: $selcolor, selcolor2: $selcolor2, selcolor3: $selcolor3, selcolor4: $selcolor4, round_btn: $round_btn, font_size: $font_size, shadow1: $shadow1, shadow_opacity_1: $shadow_opacity_1, shadow_pos_y: $shadow_pos_y, shadow_pos_x: $shadow_pos_x, width_border: $width_border, color_border: $color_border, rotate_btn: $rotate_btn, shadow2: $shadow2, selcolor5: $selcolor5, round_btn12: $round_btn12, fontName: $fontName, selectedEmoji: $selectedEmoji, font_size2_1: $font_size2_1, font_size2_2: $font_size2_2, xemo: $xemo, yemo: $yemo)
             }
             .listRowBackground(selcolor3)
             Section(header: Text("Button")) {
