@@ -264,6 +264,11 @@ struct Calculator: View {
                 .frame(width: 3000, height: 3000) //width: 375
                 .cornerRadius(round_btn)
                 .edgesIgnoringSafeArea(.all)
+                .contextMenu {
+                    Button("Settings") {
+                        
+                    }
+                }
             }
         }
             .onAppear {
