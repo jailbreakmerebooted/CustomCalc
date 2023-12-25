@@ -161,7 +161,6 @@
 				A7ECDF482A0E6F6900B448FC /* CustomCalcApp.swift */,
 				A7ECDF762A0E905A00B448FC /* RootView.swift */,
 				A75AD05A2A11615F00186C35 /* Pages */,
-				A78D58592A15F81200C300C1 /* Sounds */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -191,13 +190,6 @@
 				A78D584F2A15548200C300C1 /* updates.swift */,
 			);
 			path = FomularyBundles;
-			sourceTree = "<group>";
-		};
-		A78D58592A15F81200C300C1 /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Sounds;
 			sourceTree = "<group>";
 		};
 		A78D585F2A16000400C300C1 /* Frameworks */ = {
@@ -637,8 +629,8 @@
 				MARKETING_VERSION = 1.1.beta2;
 				PRODUCT_BUNDLE_IDENTIFIER = fjwhjegsdbfkajaehwjfbiulawekgf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -676,8 +668,8 @@
 				MARKETING_VERSION = 1.1.beta2;
 				PRODUCT_BUNDLE_IDENTIFIER = fjwhjegsdbfkajaehwjfbiulawekgf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

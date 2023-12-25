@@ -4,6 +4,10 @@ struct arg: View {
     var body: some View {
         List {
             Text("""
+------------------------
+LICENSE AGREEMENT
+------------------------
+
 This License Agreement "Personal License Agreement" is entered into between Sean Boleslawski (referred to as the "Licensor") and "Personal License Agreement" (referred to as the "Licensee"). Collectively, Licensor and Licensee shall be referred to as the "Parties."
 
 WHEREAS, Licensor is the owner of a calculator software application named "CustCalc" (the "Software") that provides various mathematical functions and operations, including the ability to customize the shape, color, size of the buttons, background, and output box, as well as the function to save and load layouts, and customizable gestures, as well as the function to save copied text from the output, as well as the feature to save the copied stuff in the history, as well as the function to save notes;
@@ -39,18 +43,6 @@ Either Party may terminate this Agreement for any reason by providing written no
 This Agreement constitutes the entire understanding between the Parties concerning the subject matter hereof and supersedes all prior agreements, understandings, negotiations, and discussions, whether oral or written.
 
 IN WITNESS WHEREOF, the Parties have executed this License Agreement as of 29th May 2023.
-
-Sean Boleslawski
-Robert-baberske-str.13
-Potsdam 14480
-ceo@dekotas.org
-+49 331 58243241
-
-Personal License Agreement
-Robert-baberske-str.13
-Potsdam 14480
-ceo@dekotas.org
-+49 331 58243241
 """)
         }
         .navigationTitle("License Agreement")

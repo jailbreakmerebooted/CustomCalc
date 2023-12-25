@@ -165,18 +165,6 @@ Either Party may terminate this Agreement for any reason by providing written no
 This Agreement constitutes the entire understanding between the Parties concerning the subject matter hereof and supersedes all prior agreements, understandings, negotiations, and discussions, whether oral or written.
 
 IN WITNESS WHEREOF, the Parties have executed this License Agreement as of 29th May 2023.
-
-Sean Boleslawski
-Robert-baberske-str.13
-Potsdam 14480
-ceo@dekotas.org
-+49 331 58243241
-
-Personal License Agreement
-Robert-baberske-str.13
-Potsdam 14480
-ceo@dekotas.org
-+49 331 58243241
 """)
                         Rectangle()
                             .frame(height: 50)
