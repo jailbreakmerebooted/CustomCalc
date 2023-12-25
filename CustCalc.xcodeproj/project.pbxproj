@@ -609,7 +609,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_ASSET_PATHS = "\"CustomCalc\"";
-				DEVELOPMENT_TEAM = 247WTX8N88;
+				DEVELOPMENT_TEAM = 8BSRH6RTJ5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CustCalc-Info.plist";
@@ -627,7 +627,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.beta2;
-				PRODUCT_BUNDLE_IDENTIFIER = fjwhjegsdbfkajaehwjfbiulawekgf;
+				PRODUCT_BUNDLE_IDENTIFIER = fjwhjegsdbfkajaehwjfbjhmnbjh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = YES;
