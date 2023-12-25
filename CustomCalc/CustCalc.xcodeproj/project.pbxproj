@@ -111,7 +111,6 @@
 		A78D58572A15813500C300C1 /* key.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = key.mp3; sourceTree = "<group>"; };
 		A78D58602A16000400C300C1 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		A78D58622A16000400C300C1 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		A78D58872A16022F00C300C1 /* CustomCalcWidExtension copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CustomCalcWidExtension copy-Info.plist"; path = "/Users/dekotasdev/Desktop/CustomCalc/CustomCalcWidExtension copy-Info.plist"; sourceTree = "<absolute>"; };
 		A78D588A2A161DE200C300C1 /* circle.fom.shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circle.fom.shapes.swift; sourceTree = "<group>"; };
 		A7BE0C9D2A1A5CAF00D7E831 /* Setup.Debug.Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setup.Debug.Bundle.swift; sourceTree = "<group>"; };
 		A7ECDF452A0E6F6900B448FC /* CustCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -267,7 +266,6 @@
 				A7ECDF622A0E6F6B00B448FC /* CustomCalcUITests */,
 				A78D585F2A16000400C300C1 /* Frameworks */,
 				A7ECDF462A0E6F6900B448FC /* Products */,
-				A78D58872A16022F00C300C1 /* CustomCalcWidExtension copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -659,7 +657,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"CustomCalc\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 247WTX8N88;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = CustCalc;
@@ -675,7 +673,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.3.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dekotastm.custcalc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dekotastm.custcalc22;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -692,7 +690,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"CustomCalc\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 247WTX8N88;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = CustCalc;
@@ -708,7 +706,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.3.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dekotastm.custcalc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dekotastm.custcalc22;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
