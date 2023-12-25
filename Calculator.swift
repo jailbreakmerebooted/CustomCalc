@@ -6,6 +6,8 @@ enum CalculatorOperation {
 }
 
 struct Calculator: View {
+    let deviceHeight = UIScreen.main.bounds.height
+    let deviceWidth = UIScreen.main.bounds.width
     @State private var enteredNumber = ""
     @State private var currentOperation: CalculatorOperation = .none
     @State private var previousNumber = 0.0
@@ -261,7 +263,8 @@ struct Calculator: View {
                         }
                 }
                 .background(selcolor3)
-                .frame(width: 3000, height: 3000) //width: 375
+                //.frame(width: 3000, height: 3000) //width: 375
+                .frame(width: deviceWidth, height: deviceHeight) //width: 375
                 .cornerRadius(round_btn)
                 .edgesIgnoringSafeArea(.all)
                 .contextMenu {
