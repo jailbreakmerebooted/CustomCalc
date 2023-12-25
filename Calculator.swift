@@ -278,6 +278,92 @@ struct Calculator: View {
                 }
                 .sheet(isPresented: $jujuj) {
                     SettingsView(width_calc_button: $width_calc_button, width_calc_button2: $width_calc_button2, height_calc_button: $height_calc_button, height_calc_button2: $height_calc_button2, selcolor: $selcolor, selcolor2: $selcolor2, selcolor3: $selcolor3, selcolor4: $selcolor4, round_btn2: $round_btn2, round_btn: $round_btn, font_size2: $font_size2, font_size: $font_size, shadow1: $shadow1, shadow1_2: $shadow1_2, shadow_opacity_1: $shadow_opacity_1, shadow_opacity_1_2: $shadow_opacity_1_2, shadow_pos_y: $shadow_pos_y, shadow_pos_x: $shadow_pos_x, shadow_pos_y_p: $shadow_pos_y_p, shadow_pos_x_p: $shadow_pos_x_p, grid_count: $grid_count, symbols: $symbols, width_border: $width_border, color_border: $color_border, width_border1: $width_border1, rotate_btn: $rotate_btn, rotate_btn1: $rotate_btn1, shadow2: $shadow2, shadow2_2: $shadow2_2, hpt: $hpt, sound: $sound, selcolor5: $selcolor5, colorString: $colorString, colorString2: $colorString2, colorString3: $colorString3, colorString4: $colorString4, colorString5: $colorString5, colorString6: $colorString6, round_btn12: $round_btn12, round_btn12_2: $round_btn12_2, height_output_box: $height_output_box, height_output_box2: $height_output_box2, width_output_box: $width_output_box, width_output_box2: $width_output_box2, spacing_outputbox: $spacing_outputbox, spacing_outputbox_down: $spacing_outputbox_down, spacing_grid_hor: $spacing_grid_hor, spacing_grid_ver: $spacing_grid_ver, spacing_outputbox_conv: $spacing_outputbox_conv, spacing_grid_hor_conv: $spacing_grid_hor_conv, spacing_grid_ver_conv: $spacing_grid_ver_conv, colorString7: $colorString7, uicolor: $uicolor, fontName: $fontName, selectedEmoji: $selectedEmoji, gesturefield1: $gesturefield1, gesturefield2: $gesturefield2, gesturefield3: $gesturefield3, gesture: $gesture, font_size2_1: $font_size2_1, font_size2_2: $font_size2_2, xemo: $xemo, yemo: $yemo, offsetx: $offsetx, offsety: $offsety, font_size3: $font_size3, font_size3_2: $font_size3_2, fontName2: $fontName2, tabbar1: $tabbar1, tabbar2: $tabbar2, tabbar3: $tabbar3, tabbar4: $tabbar4)
+                        .onDisappear {
+                            print(Update_fix0_5)
+                            print(used2)
+                            if Update_fix0_5 == true {
+                                width_border = 10
+                                width_calc_button = 75
+                                height_calc_button = 75
+                                spacing_grid_ver = 350
+                                spacing_grid_hor = 10
+                                width_output_box = 350
+                                height_output_box = 75
+                                shadow1 = 5
+                                rotate_btn = 0
+                                round_btn12 = 0
+                                font_size = 20
+                                font_size3 = 20
+                                selcolor = Color.gray
+                                selcolor2 = Color.white
+                                selcolor3 = Color.gray
+                                selcolor4 = Color.red
+                                selcolor5 = Color.black
+                                color_border = Color.red
+                                Update_fix0_5 = false
+                                used2 = true
+                            }
+                            if used2 == true {
+                                round_btn2 = Int(round_btn)
+                                font_size2 = Int(font_size)
+                                width_calc_button2 = Int(width_calc_button)
+                                height_calc_button2 = Int(height_calc_button)
+                                width_output_box2 = Int(width_output_box)
+                                height_output_box2 = Int(height_output_box)
+                                shadow1_2 = Int(shadow1)
+                                shadow_opacity_1_2 = Int(shadow_opacity_1)
+                                shadow_pos_x_p = Int(shadow_pos_x)
+                                shadow_pos_y_p = Int(shadow_pos_y)
+                                width_border1 = Int(width_border)
+                                rotate_btn1 = Int(rotate_btn)
+                                shadow2_2 = Int(shadow2)
+                                round_btn12_2 = Int(round_btn12)
+                                spacing_outputbox_conv = Int(spacing_outputbox)
+                                spacing_grid_hor_conv = Int(spacing_grid_hor)
+                                spacing_grid_ver_conv = Int(spacing_grid_ver)
+                                font_size2_2 = Int(font_size2_1)
+                                font_size3_2 = Int(font_size3)
+                                offsetx = Int(xemo)
+                                offsety = Int(yemo)
+                                convcolor()
+                            }
+                            let defaultSymbols = ["AC", "sin", "cos", "tan","√", "sin⁻¹", "cos⁻¹", "tan⁻¹","7", "8", "9", "÷", "4", "5", "6", "×", "1", "2", "3", "-", "0", ".", "=", "+"]
+                            width_calc_button = CGFloat(width_calc_button2)
+                            height_calc_button = CGFloat(height_calc_button2)
+                            width_output_box = CGFloat(width_output_box2)
+                            height_output_box = CGFloat(height_output_box2)
+                            font_size = CGFloat(font_size2)
+                            round_btn = CGFloat(round_btn2)
+                            shadow1 = CGFloat(shadow1_2)
+                            shadow_opacity_1 = CGFloat(shadow_opacity_1_2)
+                            shadow_pos_x = CGFloat(shadow_pos_x_p)
+                            shadow_pos_y = CGFloat(shadow_pos_y_p)
+                            width_border = CGFloat(width_border1)
+                            rotate_btn = CGFloat(rotate_btn1)
+                            shadow2 = CGFloat(shadow2_2)
+                            round_btn12 = CGFloat(round_btn12_2)
+                            spacing_outputbox = CGFloat(spacing_outputbox_conv)
+                            spacing_grid_hor = CGFloat(spacing_grid_hor_conv)
+                            spacing_grid_ver = CGFloat(spacing_grid_ver_conv)
+                            font_size2_1 = CGFloat(font_size2_2)
+                            font_size3 = CGFloat(font_size3_2)
+                            xemo = CGFloat(offsetx)
+                            yemo = CGFloat(offsety)
+                            used2 = true
+                            if used == false {
+                                convcolor()
+                                UserDefaults.standard.set(defaultSymbols, forKey: "Symbols")
+                                used = true
+                            }
+                            cph = UserDefaults.standard.stringArray(forKey: "cph") ?? []
+                            coph = UserDefaults.standard.stringArray(forKey: "coph") ?? []
+                            symbols = UserDefaults.standard.stringArray(forKey: "Symbols") ?? []
+                            if started == false {
+                                convcolor()
+                            } else if started == true {
+                                convcolorback()
+                            }
+                        }
                 }
             }
         }
