@@ -32,6 +32,7 @@
 		B5D621FE2A24C6A500556527 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D621FD2A24C6A400556527 /* History.swift */; };
 		B5ECC7602A2A22C700DD54E1 /* notest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ECC75F2A2A22C700DD54E1 /* notest.swift */; };
 		EFFE953C2B3A3A6A00B25366 /* preview_box.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFE953B2B3A3A6A00B25366 /* preview_box.swift */; };
+		EFFE953F2B3A3F9A00B25366 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFE953E2B3A3F9A00B25366 /* License.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		B5D621FD2A24C6A400556527 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		B5ECC75F2A2A22C700DD54E1 /* notest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notest.swift; sourceTree = "<group>"; };
 		EFFE953B2B3A3A6A00B25366 /* preview_box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = preview_box.swift; sourceTree = "<group>"; };
+		EFFE953E2B3A3F9A00B25366 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				A7361F0E2A1BC64000DB4455 /* Localizable.strings */,
 				A7ECDF482A0E6F6900B448FC /* CustomCalcApp.swift */,
 				A7ECDF762A0E905A00B448FC /* RootView.swift */,
+				EFFE953E2B3A3F9A00B25366 /* License.swift */,
 				A75AD05A2A11615F00186C35 /* Pages */,
 			);
 			path = Root;
@@ -430,6 +433,7 @@
 				A7ECDF7D2A0E974E00B448FC /* SettingsUI.swift in Sources */,
 				A75FECC92A1283BE008F51D6 /* shape.swift in Sources */,
 				A75F51BB2A10E7280072A254 /* GridSettings.swift in Sources */,
+				EFFE953F2B3A3F9A00B25366 /* License.swift in Sources */,
 				A7ECDF752A0E8E2800B448FC /* color_and_shadows.swift in Sources */,
 				B510A41A2A3234D300D30A6D /* TabBar.swift in Sources */,
 				A78D582F2A12B4F400C300C1 /* Layout.swift in Sources */,

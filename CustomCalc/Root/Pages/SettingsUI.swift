@@ -106,7 +106,7 @@ struct SettingsView: View {
                         Label("Layouts", systemImage: "rectangle.stack")
                     }
                 }
-                Section() {
+                Section {
                     NavigationLink(destination: arg()) {
                         Label("License Agreement", systemImage: "checkmark.seal")
                     }

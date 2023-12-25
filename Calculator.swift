@@ -8,6 +8,9 @@ enum CalculatorOperation {
 struct Calculator: View {
     let deviceHeight = UIScreen.main.bounds.height
     let deviceWidth = UIScreen.main.bounds.width
+    @AppStorage("used") var used: Bool = false
+    @AppStorage("Update_fix0_5") var Update_fix0_5: Bool = true
+    @StateObject var player = MusicPlayer()
     @State private var enteredNumber = ""
     @State private var currentOperation: CalculatorOperation = .none
     @State private var previousNumber = 0.0
@@ -16,11 +19,8 @@ struct Calculator: View {
     @State private var previousResult: Double = 0.0
     @State private var lastEnteredNumber: Double = 0.0
     @State private var lastOperation: CalculatorOperation = .none
-    @StateObject var player = MusicPlayer()
     @State private var testingshit: CGFloat = 1000
     @State private var started = true
-    @AppStorage("used") var used: Bool = false
-    @AppStorage("Update_fix0_5") var Update_fix0_5: Bool = true
     @State private var used2 = false
     @State private var offset: CGFloat = 0.0
     @State private var offset2: CGFloat = 0.0
@@ -29,6 +29,7 @@ struct Calculator: View {
     @State private var laststringoperation: String = ""
     @State private var dragOverIndex: Int?
     @State private var isButtonPressed = false
+    @State var jujuj: Bool = false
     @Binding var width_calc_button: CGFloat
     @Binding var width_calc_button2: Int
     @Binding var height_calc_button: CGFloat
@@ -103,7 +104,6 @@ struct Calculator: View {
     @Binding var tabbar4: String
     @Binding var cph: [String]
     @Binding var coph: [String]
-    @State var jujuj: Bool = false
     var body: some View {
         VStack {
             HStack {
