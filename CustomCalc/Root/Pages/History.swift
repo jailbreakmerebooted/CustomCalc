@@ -4,6 +4,9 @@ struct historybundle: View {
     @Binding var cph: [String]
     @Binding var coph: [String]
     @Binding var uicolor: Color
+    @Binding var selcolor3: Color
+    @Binding var selcolor2: Color
+    @Binding var selcolor: Color
     var body: some View {
         NavigationView {
             List {
@@ -12,6 +15,7 @@ struct historybundle: View {
                         HistoryItemView(item: item, uicolor: $uicolor)
                     }
                     .onDelete(perform: deleteItem)
+                    .listRowBackground(selcolor)
                     if cph == [] {
                         ZStack {
                             Rectangle()
@@ -24,7 +28,7 @@ struct historybundle: View {
                                 Image(systemName: "clock.arrow.circlepath")
                                     .scaleEffect(1.5)
                                 Spacer()
-                                Text("To copy items into history you need to press on the outputbox on calculator")
+                                Text("Just calculate something")
                                     .font(.system(size: 13))
                                 Rectangle()
                                     .opacity(0)
@@ -34,9 +38,10 @@ struct historybundle: View {
                     }
                 }
             }
+            .background(selcolor3)
+            .scrollContentBackground(.hidden)
             .listStyle(InsetGroupedListStyle())
             .navigationTitle("History")
-            .navigationBarItems(trailing: EditButton())
         }
     }
     
