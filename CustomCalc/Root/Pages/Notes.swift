@@ -9,11 +9,12 @@ struct Note: Identifiable, Codable {
 struct Notes: View {
     @State var notes: [Note] = []
     @Binding var fontName2: String
+    @Binding var selcolor3: Color
     var body: some View {
         NavigationView {
             List {
                 ForEach(notes) { note in
-                    NavigationLink(destination: NoteDetailView(note: note, notes: self.$notes, fontName2: $fontName2)) {
+                    NavigationLink(destination: NoteDetailView(note: note, notes: self.$notes, fontName2: $fontName2, selcolor3: $selcolor3)) {
                         VStack(alignment: .leading) {
                             Text(note.title)
                                 .font(.headline)
@@ -24,6 +25,8 @@ struct Notes: View {
                 .onDelete(perform: deleteNotes)
                 
             }
+            .background(selcolor3)
+            .scrollContentBackground(.hidden)
             .navigationBarTitle("Notes")
             .navigationBarItems(trailing:
                 Button(action: {
@@ -68,22 +71,25 @@ struct NoteDetailView: View {
     @State var note: Note
     @Binding var notes: [Note]
     @Binding var fontName2: String
+    @Binding var selcolor3: Color
     @State private var isEditing = false
     
     var body: some View {
-        VStack(alignment: .leading) {
-            TextField("Title", text: $note.title)
-                .font(.custom(fontName2, size: 35))
-            TextEditor(text: $note.content)
-                .font(.custom(fontName2, size: 20))
-                .padding(.top, 8)
-        }
-        .onTapGesture {
-            isEditing = true
-        }
-        .padding()
-        .navigationBarItems(trailing:
-            Button(action: {
+        VStack {
+            VStack(alignment: .leading) {
+                TextField("Title", text: $note.title)
+                    .font(.custom(fontName2, size: 35))
+                TextEditor(text: $note.content)
+                    .font(.custom(fontName2, size: 20))
+                    .padding(.top, 8)
+                    .background(selcolor3)
+            }
+            .onTapGesture {
+                isEditing = true
+            }
+            .padding()
+            .navigationBarItems(trailing:
+                                    Button(action: {
                 self.isEditing.toggle()
                 if !self.isEditing {
                     if let index = self.notes.firstIndex(where: { $0.id == self.note.id }) {
@@ -102,18 +108,21 @@ struct NoteDetailView: View {
                     Text("")
                 }
             }
-        )
-        .onDisappear {
-            if !self.isEditing {
-                if let index = self.notes.firstIndex(where: { $0.id == self.note.id }) {
-                    self.notes[index] = self.note
-                    saveNotesData(notes: self.notes) // Save the notes data
+            )
+            .onDisappear {
+                if !self.isEditing {
+                    if let index = self.notes.firstIndex(where: { $0.id == self.note.id }) {
+                        self.notes[index] = self.note
+                        saveNotesData(notes: self.notes) // Save the notes data
+                    }
                 }
             }
         }
+        .background(selcolor3)
     }
-    
-    func saveNotesData(notes: [Note]) {
+
+        
+        func saveNotesData(notes: [Note]) {
             let encoder = JSONEncoder()
             if let encoded = try? encoder.encode(notes) {
                 UserDefaults.standard.set(encoded, forKey: "notes")

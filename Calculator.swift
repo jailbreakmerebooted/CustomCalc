@@ -6,8 +6,8 @@ enum CalculatorOperation {
 }
 
 struct Calculator: View {
-    let deviceHeight = UIScreen.main.bounds.height
-    let deviceWidth = UIScreen.main.bounds.width
+    @State var deviceHeight = UIScreen.main.bounds.height
+    @State var deviceWidth = UIScreen.main.bounds.width
     @AppStorage("used") var used: Bool = false
     @AppStorage("Update_fix0_5") var Update_fix0_5: Bool = true
     @StateObject var player = MusicPlayer()
@@ -29,6 +29,7 @@ struct Calculator: View {
     @State private var laststringoperation: String = ""
     @State private var dragOverIndex: Int?
     @State private var isButtonPressed = false
+    @State private var orientation: UIDeviceOrientation? = UIDevice.current.orientation
     @State var jujuj: Bool = false
     @Binding var width_calc_button: CGFloat
     @Binding var width_calc_button2: Int
@@ -241,7 +242,7 @@ struct Calculator: View {
                                 
                               }
                             }
-                        .frame(width: spacing_grid_ver)
+                            .frame(width: spacing_grid_ver)
                         Rectangle()
                             .opacity(0)
                             .frame(height: 40)
@@ -274,6 +275,9 @@ struct Calculator: View {
                 .contextMenu {
                     Button("Settings") {
                         jujuj = true
+                    }
+                    Button("Twist") {
+                        twist()
                     }
                 }
                 .sheet(isPresented: $jujuj) {
@@ -454,6 +458,13 @@ struct Calculator: View {
                 }
         }
                 }
+    private func twist() {
+        Thread.sleep(forTimeInterval: 1.0)
+        withAnimation {
+            deviceWidth = UIScreen.main.bounds.width
+            deviceHeight = UIScreen.main.bounds.height
+        }
+    }
     private func calcgestures() {
         if !enteredNumber.isEmpty {
             enteredNumber = String(enteredNumber.dropLast())
@@ -482,7 +493,6 @@ struct Calculator: View {
         
         return "\(redInt),\(greenInt),\(blueInt)"
     }
-
     private func RGBStringToColor(_ rgbString: String) -> Color {
         let components = rgbString.components(separatedBy: ",").compactMap { Int($0) }
         guard components.count == 3 else {

@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct RootView: View {
+    @State private var tabOffset: CGFloat = 0
+    @State private var tabBarHidden = false
     @State private var width_calc_button: CGFloat = 100.0
     @AppStorage("width_calc_button2") var width_calc_button2: Int = 100
     @State private var height_calc_button: CGFloat = 100.0
@@ -85,20 +87,6 @@ struct RootView: View {
     @AppStorage("tabbaritem4") var tabbar4: String = "slider.horizontal.3"
     let defaultSymbols = ["AC", "sin", "cos", "tan", "7", "8", "9", "÷", "4", "5", "6", "×", "1", "2", "3", "-", "0", ".", "=", "+"]
     var body: some View {
-        if fomulary_acti == true {
-            ZStack {
-                HStack {
-                    Text(fomulary_store)
-                    Image(systemName: "xmark")
-                        .foregroundColor(.blue)
-                        .onTapGesture {
-                            fomulary_acti = false
-                            fomulary_store = ""
-                        }
-                }
-            }
-            .frame(height: 30)
-        }
         TabView {
             Calculator(width_calc_button: $width_calc_button, width_calc_button2: $width_calc_button2, height_calc_button: $height_calc_button, height_calc_button2: $height_calc_button2, selcolor: $selcolor, selcolor2: $selcolor2, selcolor3: $selcolor3, selcolor4: $selcolor4, round_btn2: $round_btn2, round_btn: $round_btn, font_size2: $font_size2, font_size: $font_size, shadow1: $shadow1, shadow1_2: $shadow1_2, shadow_opacity_1: $shadow_opacity_1, shadow_opacity_1_2: $shadow_opacity_1_2, shadow_pos_y: $shadow_pos_y, shadow_pos_x: $shadow_pos_x, shadow_pos_y_p: $shadow_pos_y_p, shadow_pos_x_p: $shadow_pos_x_p, grid_count: $grid_count, symbols: $symbols, width_border: $width_border, color_border: $color_border, width_border1: $width_border1, rotate_btn: $rotate_btn, rotate_btn1: $rotate_btn1, shadow2: $shadow2, shadow2_2: $shadow2_2, hpt: $hpt, sound: $sound, selcolor5: $selcolor5, colorString: $colorString, colorString2: $colorString2, colorString3: $colorString3, colorString4: $colorString4, colorString5: $colorString5, colorString6: $colorString6, round_btn12: $round_btn12, round_btn12_2: $round_btn12_2, height_output_box: $height_output_box, height_output_box2: $height_output_box2, width_output_box: $width_output_box, width_output_box2: $width_output_box2, spacing_outputbox: $spacing_outputbox, spacing_outputbox_down: $spacing_outputbox_down, spacing_grid_hor: $spacing_grid_hor, spacing_grid_ver: $spacing_grid_ver, spacing_outputbox_conv: $spacing_outputbox_conv, spacing_grid_hor_conv: $spacing_grid_hor_conv, spacing_grid_ver_conv: $spacing_grid_ver_conv, colorString7: $colorString7, uicolor: $uicolor, fontName: $fontName, selectedEmoji: $selectedEmoji, gesturefield1: $gesturefield1, gesturefield2: $gesturefield2, gesturefield3: $gesturefield3, gesture: $gesture, font_size2_1: $font_size2_1, font_size2_2: $font_size2_2, xemo: $xemo, yemo: $yemo, offsetx: $offsetx, offsety: $offsety, font_size3: $font_size3, font_size3_2: $font_size3_2, fontName2: $fontName2, tabbar1: $tabbar1, tabbar2: $tabbar2, tabbar3: $tabbar3, tabbar4: $tabbar4, cph: $cph, coph: $cpoh)
                 .tabItem {
@@ -108,7 +96,7 @@ struct RootView: View {
                 .tabItem {
                     Label("History", systemImage: tabbar2)
                 }
-            Notes(fontName2: $fontName2)
+            Notes(fontName2: $fontName2, selcolor3: $selcolor3)
                 .tabItem {
                     Label("Notes", systemImage: tabbar3)
                 }
