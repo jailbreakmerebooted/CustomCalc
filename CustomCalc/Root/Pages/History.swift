@@ -13,9 +13,9 @@ struct historybundle: View {
                 Section() {
                     ForEach(cph, id: \.self) { item in
                         HistoryItemView(item: item, uicolor: $uicolor)
+                        .listRowBackground(selcolor)
                     }
                     .onDelete(perform: deleteItem)
-                    .listRowBackground(selcolor)
                     if cph == [] {
                         ZStack {
                             Rectangle()
