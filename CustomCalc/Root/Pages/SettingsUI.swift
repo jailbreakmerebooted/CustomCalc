@@ -40,6 +40,7 @@ struct SettingsView: View {
     @Binding var colorString4: String
     @Binding var colorString5: String
     @Binding var colorString6: String
+    @Binding var colorUIString: String
     @Binding var round_btn12: CGFloat
     @Binding var round_btn12_2: Int
     @Binding var height_output_box: CGFloat
@@ -74,52 +75,55 @@ struct SettingsView: View {
     @Binding var tabbar2: String
     @Binding var tabbar3: String
     @Binding var tabbar4: String
+    @Binding var seluicolor: Color
     var body: some View {
         NavigationView {
             List {
                 Section {
-                    NavigationLink(destination: obset(width_calc_button: $width_calc_button, width_calc_button2: $width_calc_button2, height_calc_button: $height_calc_button, height_calc_button2: $height_calc_button2, selcolor: $selcolor, selcolor2: $selcolor2, selcolor3: $selcolor3, selcolor4: $selcolor4, round_btn2: $round_btn2, round_btn: $round_btn, font_size2: $font_size2, font_size: $font_size, shadow1: $shadow1, shadow1_2: $shadow1_2, shadow_opacity_1: $shadow_opacity_1, shadow_opacity_1_2: $shadow_opacity_1_2, shadow_pos_y: $shadow_pos_y, shadow_pos_x: $shadow_pos_x, shadow_pos_y_p: $shadow_pos_y_p, shadow_pos_x_p: $shadow_pos_x_p, grid_count: $grid_count, symbols: $symbols, width_border: $width_border, color_border: $color_border, width_border1: $width_border1, rotate_btn: $rotate_btn, rotate_btn1: $rotate_btn1, shadow2: $shadow2, shadow2_2: $shadow2_2, hpt: $hpt, sound: $sound, selcolor5: $selcolor5, colorString: $colorString, colorString2: $colorString2, colorString3: $colorString3, colorString4: $colorString4, colorString5: $colorString5, colorString6: $colorString6, round_btn12: $round_btn12, round_btn12_2: $round_btn12_2, height_output_box: $height_output_box, height_output_box2: $height_output_box2, width_output_box: $width_output_box, width_output_box2: $width_output_box2, spacing_outputbox: $spacing_outputbox, spacing_outputbox_down: $spacing_outputbox_down, font_size3: $font_size3, font_size3_2: $font_size3_2)) {
+                    NavigationLink(destination: obset(width_calc_button: $width_calc_button, width_calc_button2: $width_calc_button2, height_calc_button: $height_calc_button, height_calc_button2: $height_calc_button2, selcolor: $selcolor, selcolor2: $selcolor2, selcolor3: $selcolor3, selcolor4: $selcolor4, round_btn2: $round_btn2, round_btn: $round_btn, font_size2: $font_size2, font_size: $font_size, shadow1: $shadow1, shadow1_2: $shadow1_2, shadow_opacity_1: $shadow_opacity_1, shadow_opacity_1_2: $shadow_opacity_1_2, shadow_pos_y: $shadow_pos_y, shadow_pos_x: $shadow_pos_x, shadow_pos_y_p: $shadow_pos_y_p, shadow_pos_x_p: $shadow_pos_x_p, grid_count: $grid_count, symbols: $symbols, width_border: $width_border, color_border: $color_border, width_border1: $width_border1, rotate_btn: $rotate_btn, rotate_btn1: $rotate_btn1, shadow2: $shadow2, shadow2_2: $shadow2_2, hpt: $hpt, sound: $sound, selcolor5: $selcolor5, colorString: $colorString, colorString2: $colorString2, colorString3: $colorString3, colorString4: $colorString4, colorString5: $colorString5, colorString6: $colorString6, round_btn12: $round_btn12, round_btn12_2: $round_btn12_2, height_output_box: $height_output_box, height_output_box2: $height_output_box2, width_output_box: $width_output_box, width_output_box2: $width_output_box2, spacing_outputbox: $spacing_outputbox, spacing_outputbox_down: $spacing_outputbox_down, font_size3: $font_size3, font_size3_2: $font_size3_2, seluicolor: $seluicolor)) {
                         Label("Upperbox", systemImage: "rectangle")
                     }
-                    NavigationLink(destination: ColorSettings(width_calc_button: $width_calc_button, width_calc_button2: $width_calc_button2, height_calc_button: $height_calc_button, height_calc_button2: $height_calc_button2, selcolor: $selcolor, selcolor2: $selcolor2, selcolor3: $selcolor3, selcolor4: $selcolor4, round_btn2: $round_btn2, round_btn: $round_btn, font_size2: $font_size2, font_size: $font_size, shadow1: $shadow1, shadow1_2: $shadow1_2, shadow_opacity_1: $shadow_opacity_1, shadow_opacity_1_2: $shadow_opacity_1_2, shadow_pos_y: $shadow_pos_y, shadow_pos_x: $shadow_pos_x, shadow_pos_y_p: $shadow_pos_y_p, shadow_pos_x_p: $shadow_pos_x_p, width_border: $width_border, color_border: $color_border, rotate_btn: $rotate_btn, shadow2: $shadow2, selcolor5: $selcolor5, round_btn12: $round_btn12, round_btn12_2: $round_btn12_2, fontName: $fontName, selectedEmoji: $selectedEmoji, font_size2_1: $font_size2_1, font_size2_2: $font_size2_2, xemo: $xemo, yemo: $yemo)) {
+                    NavigationLink(destination: ColorSettings(width_calc_button: $width_calc_button, width_calc_button2: $width_calc_button2, height_calc_button: $height_calc_button, height_calc_button2: $height_calc_button2, selcolor: $selcolor, selcolor2: $selcolor2, selcolor3: $selcolor3, selcolor4: $selcolor4, round_btn2: $round_btn2, round_btn: $round_btn, font_size2: $font_size2, font_size: $font_size, shadow1: $shadow1, shadow1_2: $shadow1_2, shadow_opacity_1: $shadow_opacity_1, shadow_opacity_1_2: $shadow_opacity_1_2, shadow_pos_y: $shadow_pos_y, shadow_pos_x: $shadow_pos_x, shadow_pos_y_p: $shadow_pos_y_p, shadow_pos_x_p: $shadow_pos_x_p, width_border: $width_border, color_border: $color_border, rotate_btn: $rotate_btn, shadow2: $shadow2, selcolor5: $selcolor5, round_btn12: $round_btn12, round_btn12_2: $round_btn12_2, fontName: $fontName, selectedEmoji: $selectedEmoji, font_size2_1: $font_size2_1, font_size2_2: $font_size2_2, xemo: $xemo, yemo: $yemo, seluicolor: $seluicolor)) {
                         Label("Shape", systemImage: "square.on.circle") // Use the "square.on.circle" system image as the icon
                     }
-                    NavigationLink(destination: OtherCUSS(shadow1: $shadow1, width_calc_button: $width_calc_button, height_calc_button: $height_calc_button, selcolor: $selcolor, selcolor2: $selcolor2, selcolor3: $selcolor3, round_btn: $round_btn, font_size: $font_size, shadow_opacity_1: $shadow_opacity_1, shadow_pos_x: $shadow_pos_x, shadow_pos_y: $shadow_pos_y, selcolor4: $selcolor4, width_border: $width_border, color_border: $color_border, rotate_btn: $rotate_btn, shadow2: $shadow2, selcolor5: $selcolor5, round_btn12: $round_btn12, uicolor: $uicolor, colorString7: $colorString7, fontName: $fontName, selectedEmoji: $selectedEmoji, font_size2_1: $font_size2_1, font_size2_2: $font_size2_2, xemo: $xemo, yemo: $yemo)) {
+                    NavigationLink(destination: OtherCUSS(shadow1: $shadow1, width_calc_button: $width_calc_button, height_calc_button: $height_calc_button, selcolor: $selcolor, selcolor2: $selcolor2, selcolor3: $selcolor3, round_btn: $round_btn, font_size: $font_size, shadow_opacity_1: $shadow_opacity_1, shadow_pos_x: $shadow_pos_x, shadow_pos_y: $shadow_pos_y, selcolor4: $selcolor4, width_border: $width_border, color_border: $color_border, rotate_btn: $rotate_btn, shadow2: $shadow2, selcolor5: $selcolor5, round_btn12: $round_btn12, uicolor: $uicolor, colorString7: $colorString7, fontName: $fontName, selectedEmoji: $selectedEmoji, font_size2_1: $font_size2_1, font_size2_2: $font_size2_2, xemo: $xemo, yemo: $yemo, seluicolor: $seluicolor)) {
                         Label("Color and Shadows", systemImage: "eyedropper.halffull") // Use the "eyedropper.halffull" system image as the icon
                     }
-                    NavigationLink(destination: GridSettings(grid_count: $grid_count, symbols: $symbols, spacing_grid_hor: $spacing_grid_hor, spacing_grid_ver: $spacing_grid_ver, spacing_outputbox: $spacing_outputbox)) {
+                    NavigationLink(destination: GridSettings(grid_count: $grid_count, symbols: $symbols, spacing_grid_hor: $spacing_grid_hor, spacing_grid_ver: $spacing_grid_ver, spacing_outputbox: $spacing_outputbox, seluicolor: $seluicolor)) {
                         Label("Grid", systemImage: "square.grid.2x2")
                     }
-                    NavigationLink(destination: HAS(hpt: $hpt, sound: $sound)) {
+                    NavigationLink(destination: HAS(hpt: $hpt, sound: $sound, seluicolor: $seluicolor)) {
                         Label("Haptics and Sound", systemImage: "waveform.path.ecg")
                     }
-                    NavigationLink(destination: gesturebundle(gesturefield1: $gesturefield1, gesturefield2: $gesturefield2, gesturefield3: $gesturefield3, gesture: $gesture)) {
+                    NavigationLink(destination: gesturebundle(gesturefield1: $gesturefield1, gesturefield2: $gesturefield2, gesturefield3: $gesturefield3, gesture: $gesture, seluicolor: $seluicolor)) {
                         Label("Gestures", systemImage: "hand.draw")
                     }
-                    NavigationLink(destination: notest(fontName2: $fontName2)) {
+                    NavigationLink(destination: notest(fontName2: $fontName2, seluicolor: $seluicolor)) {
                         Label("Notes", systemImage: "doc.plaintext")
                     }
-                    NavigationLink(destination: TabPick(tabbar1: $tabbar1, tabbar2: $tabbar2, tabbar3: $tabbar3, tabbar4: $tabbar4)) {
+                    NavigationLink(destination: TabPick(tabbar1: $tabbar1, tabbar2: $tabbar2, tabbar3: $tabbar3, tabbar4: $tabbar4, seluicolor: $selcolor)) {
                         Label("TabBar", systemImage: "tablecells")
                     }
-                    NavigationLink(destination: LayoutST(width_calc_button: $width_calc_button, width_calc_button2: $width_calc_button2, height_calc_button: $height_calc_button, height_calc_button2: $height_calc_button2, selcolor: $selcolor, selcolor2: $selcolor2, selcolor3: $selcolor3, selcolor4: $selcolor4, round_btn2: $round_btn2, round_btn: $round_btn, font_size2: $font_size2, font_size: $font_size, shadow1: $shadow1, shadow1_2: $shadow1_2, shadow_opacity_1: $shadow_opacity_1, shadow_opacity_1_2: $shadow_opacity_1_2, shadow_pos_y: $shadow_pos_y, shadow_pos_x: $shadow_pos_x, shadow_pos_y_p: $shadow_pos_y_p, shadow_pos_x_p: $shadow_pos_x_p, grid_count: $grid_count, symbols: $symbols, width_border: $width_border, color_border: $color_border, width_border1: $width_border1, rotate_btn: $rotate_btn, shadow2: $shadow2, rotate_btn1: $rotate_btn1, hpt: $hpt, sound: $sound, shadow2_2: $shadow2_2, selcolor5: $selcolor5, colorString: $colorString, colorString2: $colorString2, colorString3: $colorString3, colorString4: $colorString4, colorString5: $colorString5, colorString6: $colorString6, round_btn12: $round_btn12, round_btn12_2: $round_btn12_2, height_output_box: $height_output_box, height_output_box2: $height_output_box2, width_output_box: $width_output_box, width_output_box2: $width_output_box2, spacing_outputbox: $spacing_outputbox, spacing_outputbox_down: $spacing_outputbox_down, spacing_grid_hor: $spacing_grid_hor, spacing_grid_ver: $spacing_grid_ver, spacing_outputbox_conv: $spacing_outputbox_conv, spacing_grid_hor_conv: $spacing_grid_hor_conv, spacing_grid_ver_conv: $spacing_grid_ver_conv, colorString7: $colorString7, uicolor: $uicolor, fontName: $fontName, selectedEmoji: $selectedEmoji, gesturefield1: $gesturefield1, gesturefield2: $gesturefield2, gesturefield3: $gesturefield3,font_size2_1: $font_size2_1, font_size2_2: $font_size2_2, xemo: $xemo, yemo: $yemo, offsetx: $offsetx, offsety: $offsety, font_size3: $font_size3, font_size3_2: $font_size3_2, tabbar1: $tabbar1, tabbar2: $tabbar2, tabbar3: $tabbar3, tabbar4: $tabbar4)) {
+                    NavigationLink(destination: LayoutST(width_calc_button: $width_calc_button, width_calc_button2: $width_calc_button2, height_calc_button: $height_calc_button, height_calc_button2: $height_calc_button2, selcolor: $selcolor, selcolor2: $selcolor2, selcolor3: $selcolor3, selcolor4: $selcolor4, round_btn2: $round_btn2, round_btn: $round_btn, font_size2: $font_size2, font_size: $font_size, shadow1: $shadow1, shadow1_2: $shadow1_2, shadow_opacity_1: $shadow_opacity_1, shadow_opacity_1_2: $shadow_opacity_1_2, shadow_pos_y: $shadow_pos_y, shadow_pos_x: $shadow_pos_x, shadow_pos_y_p: $shadow_pos_y_p, shadow_pos_x_p: $shadow_pos_x_p, grid_count: $grid_count, symbols: $symbols, width_border: $width_border, color_border: $color_border, width_border1: $width_border1, rotate_btn: $rotate_btn, shadow2: $shadow2, rotate_btn1: $rotate_btn1, hpt: $hpt, sound: $sound, shadow2_2: $shadow2_2, selcolor5: $selcolor5, colorString: $colorString, colorString2: $colorString2, colorString3: $colorString3, colorString4: $colorString4, colorString5: $colorString5, colorString6: $colorString6, round_btn12: $round_btn12, round_btn12_2: $round_btn12_2, height_output_box: $height_output_box, height_output_box2: $height_output_box2, width_output_box: $width_output_box, width_output_box2: $width_output_box2, spacing_outputbox: $spacing_outputbox, spacing_outputbox_down: $spacing_outputbox_down, spacing_grid_hor: $spacing_grid_hor, spacing_grid_ver: $spacing_grid_ver, spacing_outputbox_conv: $spacing_outputbox_conv, spacing_grid_hor_conv: $spacing_grid_hor_conv, spacing_grid_ver_conv: $spacing_grid_ver_conv, colorString7: $colorString7, uicolor: $uicolor, fontName: $fontName, selectedEmoji: $selectedEmoji, gesturefield1: $gesturefield1, gesturefield2: $gesturefield2, gesturefield3: $gesturefield3,font_size2_1: $font_size2_1, font_size2_2: $font_size2_2, xemo: $xemo, yemo: $yemo, offsetx: $offsetx, offsety: $offsety, font_size3: $font_size3, font_size3_2: $font_size3_2, tabbar1: $tabbar1, tabbar2: $tabbar2, tabbar3: $tabbar3, tabbar4: $tabbar4, seluicolor: $seluicolor, colorUIString: $colorUIString)) {
                         Label("Layouts", systemImage: "rectangle.stack")
                     }
                 }
                 Section {
-                    NavigationLink(destination: arg()) {
+                    NavigationLink(destination: arg(seluicolor: $selcolor)) {
                         Label("License Agreement", systemImage: "checkmark.seal")
                     }
-                    NavigationLink(destination: updates()) {
+                    NavigationLink(destination: updates(seluicolor: $seluicolor)) {
                         Label("Changelog", systemImage: "doc")
                     }
-                    NavigationLink(destination: Credits()) {
+                    NavigationLink(destination: Credits(seluicolor: $seluicolor)) {
                                 Label("Credits", systemImage: "person.3")
                             }
                     
                     
                 }
             }
+            .background(seluicolor)
+            .scrollContentBackground(.hidden)
             .navigationTitle("Settings")
         }
     }

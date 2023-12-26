@@ -12,6 +12,7 @@ struct Credits: View {
     let GadgetmanURL = URL(string: "https://twitter.com/gadgetman78")!
     let dilanURL = URL(string: "https://twitter.com/crustrat13976")!
     let bіонарEкURL = URL(string: "https://t.me/aidenpearce5111")!
+    @Binding var seluicolor: Color
     var body: some View {
                 List {
                     Section(header: Text("Main")) {
@@ -68,12 +69,8 @@ struct Credits: View {
                         
                     }
                 }
+                .background(seluicolor)
+                .scrollContentBackground(.hidden)
                 .navigationTitle("Credits")
         }
-}
-
-struct Credits_Previews: PreviewProvider {
-    static var previews: some View {
-        Credits()
-    }
 }

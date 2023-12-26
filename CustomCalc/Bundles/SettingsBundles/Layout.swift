@@ -23,6 +23,7 @@ struct Layout: Codable, Identifiable, Equatable {
     var color5: String?
     var color6: String?
     var color7: String?
+    var uicolor: String?
     var sound: String?
     var shadow2: CGFloat?
     var round_btn_12: CGFloat?
@@ -126,6 +127,8 @@ struct LayoutST: View {
     @Binding var tabbar2: String
     @Binding var tabbar3: String
     @Binding var tabbar4: String
+    @Binding var seluicolor: Color
+    @Binding var colorUIString: String
     
     //preview_vals
     @State private var h1: CGFloat = 0.0
@@ -252,6 +255,8 @@ struct LayoutST: View {
                             Label("Import Layout", systemImage: "square.and.arrow.down")
                         }
                     }
+                    .background(seluicolor)
+                    .scrollContentBackground(.hidden)
                     .onAppear(perform: loadSavedLayouts)
                     .onAppear()
                     .fileImporter(isPresented: $isImporting, allowedContentTypes: [.json]) { result in
@@ -286,6 +291,7 @@ struct LayoutST: View {
                                     self.colorString5 = layout.color5 ?? ""
                                     self.colorString6 = layout.color6 ?? ""
                                     self.colorString7 = layout.color7 ?? ""
+                                    self.colorUIString = layout.uicolor ?? ""
                                     self.sound = layout.sound ?? ""
                                     self.shadow2 = layout.shadow2 ?? 0.0
                                     self.round_btn12 = layout.round_btn_12 ?? 0.0
@@ -456,6 +462,7 @@ struct LayoutST: View {
         self.colorString5 = layout.color5 ?? ""
         self.colorString6 = layout.color6 ?? ""
         self.colorString7 = layout.color7 ?? ""
+        self.colorUIString = layout.uicolor ?? ""
         // ...
         // ...
         
@@ -552,6 +559,7 @@ struct LayoutST: View {
         colorString5 = colorToRGBString(color_border)
         colorString6 = colorToRGBString(selcolor5)
         colorString7 = colorToRGBString(uicolor)
+        colorUIString = colorToRGBString(seluicolor)
     }
     
     private func convcolorback() {
@@ -562,6 +570,7 @@ struct LayoutST: View {
         selcolor5 = RGBStringToColor(colorString6)
         color_border = RGBStringToColor(colorString5)
         uicolor = RGBStringToColor(colorString7)
+        seluicolor = RGBStringToColor(colorUIString)
     }
     private func saveLayout() {
         convcolor()
@@ -584,6 +593,7 @@ struct LayoutST: View {
                             color5: colorString5,
                             color6: colorString6,
                             color7: colorString7,
+                            uicolor: colorUIString,
                             sound: sound,
                             shadow2: shadow2,
                             round_btn_12: round_btn12,
@@ -733,6 +743,7 @@ struct LayoutST: View {
         colorString5 = layout.color5 ?? ""
         colorString6 = layout.color6 ?? ""
         colorString7 = layout.color7 ?? ""
+        colorUIString = layout.uicolor ?? ""
         convcolorback()
     }
     func applyshape(_ layout: Layout) {
@@ -797,6 +808,7 @@ struct LayoutST: View {
             colorString5 = layout.color5 ?? ""
             colorString6 = layout.color6 ?? ""
             colorString7 = layout.color7 ?? ""
+            colorUIString = layout.uicolor ?? ""
             convcolorback()
             font_size2_1 = layout.font_size2_1 ?? 0.0
             xemo = layout.xemo ?? 0.0

@@ -28,6 +28,7 @@ struct OtherCUSS: View {
     @Binding var font_size2_2: Int
     @Binding var xemo: CGFloat
     @Binding var yemo: CGFloat
+    @Binding var seluicolor: Color
     var body: some View {
         List {
             Section(header: Text("preview")) {
@@ -70,9 +71,14 @@ struct OtherCUSS: View {
                 ColorPicker("Text Shadow", selection: $selcolor5)
                 ColorPicker("Shadow Color", selection: $selcolor4)
                 ColorPicker("Border Color", selection: $color_border)
-                ColorPicker("UIColor", selection: $uicolor)
+            }
+            Section(header: Text("UI")) {
+                ColorPicker("Background UI", selection: $seluicolor)
+                ColorPicker("Accent Color", selection: $uicolor)
             }
         }
+        .background(seluicolor)
+        .scrollContentBackground(.hidden)
         .navigationTitle("Color and Shadows")
     }
 }

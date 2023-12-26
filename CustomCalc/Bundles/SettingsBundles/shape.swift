@@ -35,6 +35,7 @@ struct ColorSettings: View {
     @Binding var font_size2_2: Int
     @Binding var xemo: CGFloat
     @Binding var yemo: CGFloat
+    @Binding var seluicolor: Color
     @State private var height_calc_button_geo: CGFloat = 0
     @State private var width_calc_button_geo: CGFloat = 0
     @State private var font_size_geo: CGFloat = 0
@@ -103,6 +104,8 @@ struct ColorSettings: View {
                 }
             }
         }
+        .background(seluicolor)
+        .scrollContentBackground(.hidden)
                 .navigationViewStyle(DefaultNavigationViewStyle())
                 .padding(0)
                 .navigationTitle("Shape")
