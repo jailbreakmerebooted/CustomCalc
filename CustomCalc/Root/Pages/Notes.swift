@@ -82,7 +82,7 @@ struct NoteDetailView: View {
                 TextEditor(text: $note.content)
                     .font(.custom(fontName2, size: 20))
                     .padding(.top, 8)
-                    .background(selcolor3)
+                    .scrollContentBackground(.hidden)
             }
             .onTapGesture {
                 isEditing = true
