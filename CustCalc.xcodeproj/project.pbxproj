@@ -178,6 +178,7 @@
 				A7ECDF742A0E8E2800B448FC /* color_and_shadows.swift */,
 				A78D582E2A12B4F400C300C1 /* Layout.swift */,
 				B510A4192A3234D300D30A6D /* TabBar.swift */,
+				B5ECC75F2A2A22C700DD54E1 /* notest.swift */,
 				B5D621F92A23FE1500556527 /* Gesture.swift */,
 				A78D58322A13EA5700C300C1 /* Haptic+Sound.swift */,
 				B5D621FB2A2431C100556527 /* arg.swift */,
@@ -275,7 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				EFFE953B2B3A3A6A00B25366 /* preview_box.swift */,
-				B5ECC75F2A2A22C700DD54E1 /* notest.swift */,
 				B5D621F62A23C68F00556527 /* EmojiPicker.swift */,
 			);
 			path = assets;

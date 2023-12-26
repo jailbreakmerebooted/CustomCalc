@@ -58,9 +58,6 @@ struct FontWheelPicker2: View {
             }
             .pickerStyle(WheelPickerStyle())
             .frame(height: 150)
-            Rectangle()
-                .frame(height: 100)
-                .opacity(0)
         }
     }
 }

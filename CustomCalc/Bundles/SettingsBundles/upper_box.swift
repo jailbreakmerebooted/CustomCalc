@@ -56,7 +56,7 @@ struct obset: View {
             Section {
                 ZStack {
                     Rectangle()
-                        .frame(height: 250)
+                        .frame(height: 200)
                         .foregroundColor(selcolor3)
                         .overlay {
                             Rectangle()

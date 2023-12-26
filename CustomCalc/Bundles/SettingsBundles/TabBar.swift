@@ -17,9 +17,9 @@ struct TabPick: View {
     var body: some View {
         List {
             ZStack {
-                Rectangle()
+                /*Rectangle()
                     .opacity(0)
-                    .frame(height: 175)
+                    .frame(height: 175)*/
                 
                 VStack {
                     HStack {
