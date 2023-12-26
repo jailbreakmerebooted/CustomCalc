@@ -10,19 +10,23 @@ struct Notes: View {
     @State var notes: [Note] = []
     @Binding var fontName2: String
     @Binding var selcolor3: Color
+    @Binding var selcolor2: Color
+    @Binding var selcolor: Color
     var body: some View {
         NavigationView {
             List {
                 ForEach(notes) { note in
-                    NavigationLink(destination: NoteDetailView(note: note, notes: self.$notes, fontName2: $fontName2, selcolor3: $selcolor3)) {
+                    NavigationLink(destination: NoteDetailView(note: note, notes: self.$notes, fontName2: $fontName2, selcolor3: $selcolor3, selcolor2: $selcolor2)) {
                         VStack(alignment: .leading) {
                             Text(note.title)
-                                .font(.headline)
+                                .font(.custom(fontName2, size: 15))
+                                .foregroundColor(selcolor2)
                         }
                     }
                     .contentShape(Rectangle()) // Make the whole item tappable
                 }
                 .onDelete(perform: deleteNotes)
+                .listRowBackground(selcolor)
                 
             }
             .background(selcolor3)
@@ -72,6 +76,7 @@ struct NoteDetailView: View {
     @Binding var notes: [Note]
     @Binding var fontName2: String
     @Binding var selcolor3: Color
+    @Binding var selcolor2: Color
     @State private var isEditing = false
     
     var body: some View {
@@ -79,8 +84,10 @@ struct NoteDetailView: View {
             VStack(alignment: .leading) {
                 TextField("Title", text: $note.title)
                     .font(.custom(fontName2, size: 35))
+                    .foregroundColor(selcolor2)
                 TextEditor(text: $note.content)
                     .font(.custom(fontName2, size: 20))
+                    .foregroundColor(selcolor2)
                     .padding(.top, 8)
                     .scrollContentBackground(.hidden)
             }
@@ -99,7 +106,7 @@ struct NoteDetailView: View {
                 }
             }) {
                 if isEditing {
-                    Text("Hide")
+                    Text("Save")
                         .onTapGesture {
                             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                             isEditing = false

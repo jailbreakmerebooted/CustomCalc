@@ -96,7 +96,7 @@ struct RootView: View {
                 .tabItem {
                     Label("History", systemImage: tabbar2)
                 }
-            Notes(fontName2: $fontName2, selcolor3: $selcolor3)
+            Notes(fontName2: $fontName2, selcolor3: $selcolor3, selcolor2: $selcolor2, selcolor: $selcolor)
                 .tabItem {
                     Label("Notes", systemImage: tabbar3)
                 }
