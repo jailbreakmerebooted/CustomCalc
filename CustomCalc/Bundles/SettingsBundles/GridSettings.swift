@@ -64,27 +64,31 @@ struct SymbolGridView: View {
     let defaultSymbols = ["AC", "sin", "cos", "tan", "7", "8", "9", "÷", "4", "5", "6", "×", "1", "2", "3", "-", "0", ".", "=", "+"]
     var body: some View {
         let columns = Array(repeating: GridItem(.flexible()), count: grid_count)
-        LazyVGrid(columns: columns, spacing: 16) {
-            ForEach(symbols, id: \.self) { symbol in
-                Text(symbol)
-                    .font(.title)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color.gray.opacity(0.2))
+        VStack {
+            Spacer()
+            LazyVGrid(columns: columns, spacing: 16) {
+                ForEach(symbols, id: \.self) { symbol in
+                    Text(symbol)
+                        .font(.title)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(Color.gray.opacity(0.2))
+                }
             }
-        }
-        .padding()
-        .navigationBarTitle("Grid Items")
-        .navigationBarItems(trailing: Button("Edit") {
-            enb = true
-        })
-        .sheet(isPresented: $enb) {
-            SymbolEditorView(symbols: $symbols, defaultSymbols: defaultSymbols)
-        }
-        .onAppear {
-            symbols = UserDefaults.standard.stringArray(forKey: "Symbols") ?? []
-        }
-        .onDisappear {
-            UserDefaults.standard.set(symbols, forKey: "Symbols")
+            .padding()
+            .navigationBarTitle("Grid Items")
+            .navigationBarItems(trailing: Button("Edit") {
+                enb = true
+            })
+            .sheet(isPresented: $enb) {
+                SymbolEditorView(symbols: $symbols, defaultSymbols: defaultSymbols)
+            }
+            .onAppear {
+                symbols = UserDefaults.standard.stringArray(forKey: "Symbols") ?? []
+            }
+            .onDisappear {
+                UserDefaults.standard.set(symbols, forKey: "Symbols")
+            }
+            Spacer()
         }
     }
 }
@@ -98,6 +102,94 @@ struct SymbolEditorView: View {
     var body: some View {
         NavigationView {
             List {
+                Section {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            Button(action: {
+                                symbols = defaultSymbols
+                                UserDefaults.standard.set(symbols, forKey: "Symbols")
+                            }){
+                                ZStack {
+                                    Rectangle()
+                                        .frame(width: 125, height: 50)
+                                        .cornerRadius(10)
+                                    Text("Restore Defaults")
+                                        .foregroundColor(.primary)
+                                        .font(.system(size: 12))
+                                }
+                            }
+                            Button(action: {
+                                addUniqueSymbols([""])
+                            }){
+                                ZStack {
+                                    Rectangle()
+                                        .frame(width: 125, height: 50)
+                                        .cornerRadius(10)
+                                    Text("Add Symbol")
+                                        .foregroundColor(.primary)
+                                        .font(.system(size: 12))
+                                }
+                            }
+                            Button(action: {
+                                symbols = []
+                            }){
+                                ZStack {
+                                    Rectangle()
+                                        .frame(width: 125, height: 50)
+                                        .cornerRadius(10)
+                                    Text("Delete all symbols")
+                                        .foregroundColor(.primary)
+                                        .font(.system(size: 12))
+                                }
+                            }
+                        }
+                    }
+                    .frame(height: 75)
+                }
+                Section {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            Button(action: {
+                                symbols = defaultSymbols
+                                UserDefaults.standard.set(symbols, forKey: "Symbols")
+                            }){
+                                ZStack {
+                                    Rectangle()
+                                        .frame(width: 125, height: 50)
+                                        .cornerRadius(10)
+                                    Text("Restore Defaults")
+                                        .foregroundColor(.primary)
+                                        .font(.system(size: 12))
+                                }
+                            }
+                            Button(action: {
+                                addUniqueSymbols([""])
+                            }){
+                                ZStack {
+                                    Rectangle()
+                                        .frame(width: 125, height: 50)
+                                        .cornerRadius(10)
+                                    Text("Add Symbol")
+                                        .foregroundColor(.primary)
+                                        .font(.system(size: 12))
+                                }
+                            }
+                            Button(action: {
+                                symbols = []
+                            }){
+                                ZStack {
+                                    Rectangle()
+                                        .frame(width: 125, height: 50)
+                                        .cornerRadius(10)
+                                    Text("Delete all symbols")
+                                        .foregroundColor(.primary)
+                                        .font(.system(size: 12))
+                                }
+                            }
+                        }
+                    }
+                    .frame(height: 75)
+                }
                 Section {
                     ForEach(symbols.indices, id: \.self) { index in
                         TextField("Symbol", text: $symbols[index])
@@ -113,22 +205,6 @@ struct SymbolEditorView: View {
                     }
                 }
                 if editMode == .inactive {
-                    Section {
-                        Button("Restore Defaults", action: {
-                            symbols = defaultSymbols
-                            UserDefaults.standard.set(symbols, forKey: "Symbols")
-                        })
-                        .foregroundColor(.orange)
-                        Button("Add Symbol", action: {
-                            addUniqueSymbols([""])
-                        })
-                        .foregroundColor(.green)
-                        Button("Delete all Symbols", action: {
-                            symbols = []
-                            UserDefaults.standard.set(symbols, forKey: "Symbols")
-                        })
-                        .foregroundColor(.red)
-                    }
                     Section {
                         Button("Add Numbers", action: {
                             addUniqueSymbols(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "."])
