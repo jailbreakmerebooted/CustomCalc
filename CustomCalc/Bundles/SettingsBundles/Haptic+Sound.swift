@@ -3,7 +3,6 @@ import SwiftUI
 struct HAS: View {
     @Binding var hpt: UIImpactFeedbackGenerator.FeedbackStyle
     @Binding var sound: String
-    @Binding var seluicolor: Color
     
     let hapticOptions: [(String, UIImpactFeedbackGenerator.FeedbackStyle)] = [
         ("Light", .light),
@@ -30,8 +29,6 @@ struct HAS: View {
                 }
             }
         }
-        .background(seluicolor)
-        .scrollContentBackground(.hidden)
         .navigationTitle("Haptics and Sound")
     }
 }

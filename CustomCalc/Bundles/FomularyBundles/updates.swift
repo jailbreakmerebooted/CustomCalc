@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct updates: View {
-    @Binding var seluicolor: Color
     var body: some View {
         List {
             Group {
@@ -201,8 +200,6 @@ struct updates: View {
                 }
             }
         }
-        .background(seluicolor)
-        .scrollContentBackground(.hidden)
         .navigationTitle("Update Changelogs")
     }
 }

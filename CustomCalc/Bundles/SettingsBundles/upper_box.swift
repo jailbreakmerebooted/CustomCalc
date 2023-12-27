@@ -51,7 +51,6 @@ struct obset: View {
     @State private var widthopt_geo: CGFloat = 0
     @Binding var font_size3: CGFloat
     @Binding var font_size3_2: Int
-    @Binding var seluicolor: Color
     var body: some View {
         List {
             Section {
@@ -97,8 +96,6 @@ struct obset: View {
                 }
             }
         }
-        .background(seluicolor)
-        .scrollContentBackground(.hidden)
         .navigationTitle("Upperbox")
         .onAppear {
             if UIDevice.current.userInterfaceIdiom == .pad {

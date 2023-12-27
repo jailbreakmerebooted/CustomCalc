@@ -5,7 +5,6 @@ struct gesturebundle: View {
     @Binding var gesturefield2: Int
     @Binding var gesturefield3: Int
     @Binding var gesture: Int
-    @Binding var seluicolor: Color
     private let segments = ["None", "Clear Number", "Equal"]
     private let segments2 = ["None", "Clear Number", "Equal"]
     private let segments3 = ["None", "Clear Number", "Equal"]
@@ -42,8 +41,6 @@ struct gesturebundle: View {
                 }
             }
         }
-        .background(seluicolor)
-        .scrollContentBackground(.hidden)
         .navigationTitle("Gestures")
     }
 }

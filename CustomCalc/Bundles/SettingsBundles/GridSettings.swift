@@ -6,7 +6,6 @@ struct GridSettings: View {
     @Binding var spacing_grid_hor: CGFloat
     @Binding var spacing_grid_ver: CGFloat
     @Binding var spacing_outputbox: CGFloat
-    @Binding var seluicolor: Color
     @State private var spacing_geo: CGFloat = 0
     @State private var grid_hor_geo: CGFloat = 0
     @State private var grid_ver_geo: CGFloat = 0
@@ -17,7 +16,7 @@ struct GridSettings: View {
             } else {
                 Stepper("\(grid_count)", value: $grid_count, in: 1...10, step: 1) //10
             }
-            NavigationLink(destination: SymbolGridView(grid_count: $grid_count, seluicolor: $seluicolor, symbols: symbols)) {
+            NavigationLink(destination: SymbolGridView(grid_count: $grid_count, symbols: symbols)) {
                 Text("Grid Items")
             }
             Section(header: Text("Grid Size")) {
@@ -43,8 +42,6 @@ struct GridSettings: View {
                 }
             }
         }
-        .background(seluicolor)
-        .scrollContentBackground(.hidden)
         .navigationTitle("Grid")
         .onAppear {
             if UIDevice.current.userInterfaceIdiom == .pad {
@@ -62,39 +59,33 @@ struct GridSettings: View {
 
 struct SymbolGridView: View {
     @Binding var grid_count: Int
-    @Binding var seluicolor: Color
     @State private var enb = false
     @State var symbols: [String] = UserDefaults.standard.stringArray(forKey: "Symbols") ?? []
     let defaultSymbols = ["AC", "sin", "cos", "tan", "7", "8", "9", "÷", "4", "5", "6", "×", "1", "2", "3", "-", "0", ".", "=", "+"]
     var body: some View {
         let columns = Array(repeating: GridItem(.flexible()), count: grid_count)
-        VStack {
-            Spacer()
-            LazyVGrid(columns: columns, spacing: 16) {
-                ForEach(symbols, id: \.self) { symbol in
-                    Text(symbol)
-                        .font(.title)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .background(Color.gray.opacity(0.2))
-                }
+        LazyVGrid(columns: columns, spacing: 16) {
+            ForEach(symbols, id: \.self) { symbol in
+                Text(symbol)
+                    .font(.title)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.gray.opacity(0.2))
             }
-            .padding()
-            .navigationBarTitle("Grid Items")
-            .navigationBarItems(trailing: Button("Edit") {
-                enb = true
-            })
-            .sheet(isPresented: $enb) {
-                SymbolEditorView(symbols: $symbols, defaultSymbols: defaultSymbols, seluicolor: $seluicolor)
-            }
-            .onAppear {
-                symbols = UserDefaults.standard.stringArray(forKey: "Symbols") ?? []
-            }
-            .onDisappear {
-                UserDefaults.standard.set(symbols, forKey: "Symbols")
-            }
-            Spacer()
         }
-        .background(seluicolor)
+        .padding()
+        .navigationBarTitle("Grid Items")
+        .navigationBarItems(trailing: Button("Edit") {
+            enb = true
+        })
+        .sheet(isPresented: $enb) {
+            SymbolEditorView(symbols: $symbols, defaultSymbols: defaultSymbols)
+        }
+        .onAppear {
+            symbols = UserDefaults.standard.stringArray(forKey: "Symbols") ?? []
+        }
+        .onDisappear {
+            UserDefaults.standard.set(symbols, forKey: "Symbols")
+        }
     }
 }
 
@@ -103,67 +94,10 @@ struct SymbolEditorView: View {
     @State private var editMode: EditMode = .inactive
     let defaultSymbols: [String]
     @State private var showAlert = false
-    @Binding var seluicolor: Color
 
     var body: some View {
         NavigationView {
             List {
-                Section {
-                    ScrollView(.horizontal) {
-                        HStack {
-                            Button(action: {
-                                symbols = defaultSymbols
-                                UserDefaults.standard.set(symbols, forKey: "Symbols")
-                            }){
-                                ZStack {
-                                    Rectangle()
-                                        .frame(width: 125, height: 50)
-                                        .cornerRadius(10)
-                                    Text("Restore Defaults")
-                                        .foregroundColor(.primary)
-                                        .font(.system(size: 12))
-                                }
-                            }
-                            Button(action: {
-                                addUniqueSymbols([""])
-                            }){
-                                ZStack {
-                                    Rectangle()
-                                        .frame(width: 125, height: 50)
-                                        .cornerRadius(10)
-                                    Text("Add Symbol")
-                                        .foregroundColor(.primary)
-                                        .font(.system(size: 12))
-                                }
-                            }
-                            Button(action: {
-                                symbols = []
-                            }){
-                                ZStack {
-                                    Rectangle()
-                                        .frame(width: 125, height: 50)
-                                        .cornerRadius(10)
-                                    Text("Delete all symbols")
-                                        .foregroundColor(.primary)
-                                        .font(.system(size: 12))
-                                }
-                            }
-                            Button(action: {
-                                symbols = []
-                            }){
-                                ZStack {
-                                    Rectangle()
-                                        .frame(width: 125, height: 50)
-                                        .cornerRadius(10)
-                                    Text("Delete all symbols")
-                                        .foregroundColor(.primary)
-                                        .font(.system(size: 12))
-                                }
-                            }
-                        }
-                    }
-                    .frame(height: 75)
-                }
                 Section {
                     ForEach(symbols.indices, id: \.self) { index in
                         TextField("Symbol", text: $symbols[index])
@@ -179,6 +113,22 @@ struct SymbolEditorView: View {
                     }
                 }
                 if editMode == .inactive {
+                    Section {
+                        Button("Restore Defaults", action: {
+                            symbols = defaultSymbols
+                            UserDefaults.standard.set(symbols, forKey: "Symbols")
+                        })
+                        .foregroundColor(.orange)
+                        Button("Add Symbol", action: {
+                            addUniqueSymbols([""])
+                        })
+                        .foregroundColor(.green)
+                        Button("Delete all Symbols", action: {
+                            symbols = []
+                            UserDefaults.standard.set(symbols, forKey: "Symbols")
+                        })
+                        .foregroundColor(.red)
+                    }
                     Section {
                         Button("Add Numbers", action: {
                             addUniqueSymbols(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "."])
@@ -211,8 +161,6 @@ struct SymbolEditorView: View {
                     }
                 }
             }
-            .background(seluicolor)
-            .scrollContentBackground(.hidden)
             .navigationBarTitle("Edit Symbols")
             .navigationBarItems(leading: Button("Cancel") {
                 dismiss()

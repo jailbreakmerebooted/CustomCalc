@@ -2,13 +2,10 @@ import SwiftUI
 
 struct notest: View {
     @Binding var fontName2: String
-    @Binding var seluicolor: Color
     var body: some View {
         List {
             FontWheelPicker2(fontName2: $fontName2)
         }
-        .background(seluicolor)
-        .scrollContentBackground(.hidden)
         .navigationTitle("Notes")
     }
 }

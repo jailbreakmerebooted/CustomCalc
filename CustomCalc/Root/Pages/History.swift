@@ -7,7 +7,6 @@ struct historybundle: View {
     @Binding var selcolor3: Color
     @Binding var selcolor2: Color
     @Binding var selcolor: Color
-    @Binding var seluicolor: Color
     var body: some View {
         NavigationView {
             List {
@@ -39,12 +38,11 @@ struct historybundle: View {
                     }
                 }
             }
-            .background(seluicolor)
+            .background(selcolor3)
             .scrollContentBackground(.hidden)
             .listStyle(InsetGroupedListStyle())
             .navigationTitle("History")
         }
-        .navigationViewStyle(StackNavigationViewStyle()) // Apply StackNavigationViewStyle
     }
     
     func deleteItem(at offsets: IndexSet) {

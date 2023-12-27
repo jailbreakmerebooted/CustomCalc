@@ -9,14 +9,14 @@ struct Note: Identifiable, Codable {
 struct Notes: View {
     @State var notes: [Note] = []
     @Binding var fontName2: String
+    @Binding var selcolor3: Color
     @Binding var selcolor2: Color
     @Binding var selcolor: Color
-    @Binding var seluicolor: Color
     var body: some View {
         NavigationView {
             List {
                 ForEach(notes) { note in
-                    NavigationLink(destination: NoteDetailView(note: note, notes: self.$notes, fontName2: $fontName2, seluicolor: $seluicolor, selcolor2: $selcolor2)) {
+                    NavigationLink(destination: NoteDetailView(note: note, notes: self.$notes, fontName2: $fontName2, selcolor3: $selcolor3, selcolor2: $selcolor2)) {
                         VStack(alignment: .leading) {
                             Text(note.title)
                                 .font(.custom(fontName2, size: 15))
@@ -29,7 +29,7 @@ struct Notes: View {
                 .listRowBackground(selcolor)
                 
             }
-            .background(seluicolor)
+            .background(selcolor3)
             .scrollContentBackground(.hidden)
             .navigationBarTitle("Notes")
             .navigationBarItems(trailing:
@@ -44,7 +44,6 @@ struct Notes: View {
                 self.notes = loadNotesData() // Load the notes data
             }
         }
-        .navigationViewStyle(StackNavigationViewStyle()) // Apply StackNavigationViewStyle
     }
     
     // MARK: - Data Persistence
@@ -76,7 +75,7 @@ struct NoteDetailView: View {
     @State var note: Note
     @Binding var notes: [Note]
     @Binding var fontName2: String
-    @Binding var seluicolor: Color
+    @Binding var selcolor3: Color
     @Binding var selcolor2: Color
     @State private var isEditing = false
     
@@ -126,7 +125,7 @@ struct NoteDetailView: View {
                 }
             }
         }
-        .background(seluicolor)
+        .background(selcolor3)
     }
 
         

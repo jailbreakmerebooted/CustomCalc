@@ -6,7 +6,6 @@ struct TabPick: View {
     @Binding var tabbar2: String
     @Binding var tabbar3: String
     @Binding var tabbar4: String
-    @Binding var seluicolor: Color
     
     let options = [
         ["plus.slash.minus", "sum", "angle", "x.squareroot"],
@@ -88,7 +87,5 @@ struct TabPick: View {
             }
             .navigationTitle("TabBar")
         }
-        .background(seluicolor)
-        .scrollContentBackground(.hidden)
     }
 }
