@@ -157,7 +157,7 @@ struct SymbolEditorView: View {
                                     Rectangle()
                                         .frame(width: 125, height: 50)
                                         .cornerRadius(10)
-                                    Text("Restore Defaults")
+                                    Text("Add")
                                         .foregroundColor(.primary)
                                         .font(.system(size: 12))
                                 }
@@ -206,10 +206,6 @@ struct SymbolEditorView: View {
                 }
                 if editMode == .inactive {
                     Section {
-                        Button("Add Numbers", action: {
-                            addUniqueSymbols(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "."])
-                        })
-                        .frame(height: 125)
                         Button("Add Normal Operations", action: {
                             addUniqueSymbols(["=", "-", "+", "×", "÷", "AC"])
                         })
@@ -250,6 +246,7 @@ struct SymbolEditorView: View {
                 )
             }
         }
+        .navigationViewStyle(.stack)
     }
 
     private func dismiss() {

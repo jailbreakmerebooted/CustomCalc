@@ -43,6 +43,7 @@ struct historybundle: View {
             .listStyle(InsetGroupedListStyle())
             .navigationTitle("History")
         }
+        .navigationViewStyle(.stack)
     }
     
     func deleteItem(at offsets: IndexSet) {

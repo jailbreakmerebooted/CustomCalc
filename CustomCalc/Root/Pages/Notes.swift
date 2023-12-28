@@ -44,6 +44,7 @@ struct Notes: View {
                 self.notes = loadNotesData() // Load the notes data
             }
         }
+        .navigationViewStyle(.stack)
     }
     
     // MARK: - Data Persistence
