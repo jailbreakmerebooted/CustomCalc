@@ -36,11 +36,8 @@ struct DocumentPicker: UIViewControllerRepresentable {
         }
     }
 }
-
-/* Inside Whataver view do this
-  example
  
- struct ContentView: View {
+/* struct trythat: View {
      @State private var showDocumentPicker = false
 
      var body: some View {
@@ -59,5 +56,4 @@ struct DocumentPicker: UIViewControllerRepresentable {
          // Implement your theme importing logic here
      }
  }
-
- */
+*/
