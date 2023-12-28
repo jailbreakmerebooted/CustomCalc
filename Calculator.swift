@@ -197,29 +197,7 @@ struct Calculator: View {
                                         player.play()
                                     }
                                 }) {
-                                    ZStack {
-                                        Rectangle()
-                                            .frame(width: width_calc_button, height: height_calc_button)
-                                            .cornerRadius(round_btn)
-                                            .shadow(color: selcolor4.opacity(shadow_opacity_1), radius: shadow1, x: shadow_pos_x, y: shadow_pos_y)
-                                            .foregroundColor(color_border)
-                                            .rotationEffect(Angle(degrees: rotate_btn))
-                                        Text("")
-                                            .frame(width: width_calc_button - width_border, height: height_calc_button - width_border)
-                                            .background(selcolor)
-                                            .foregroundColor(selcolor2)
-                                            .cornerRadius(round_btn)
-                                            .rotationEffect(Angle(degrees: rotate_btn))
-                                        Text(selectedEmoji)
-                                            .font(.system(size: font_size2_1))
-                                            .offset(x: xemo, y: yemo)
-                                            .rotationEffect(Angle(degrees: rotate_btn))
-                                        Text(symbol)
-                                            .foregroundColor(selcolor2)
-                                            .font(.custom(fontName, size: font_size))
-                                            .rotationEffect(Angle(degrees: rotate_btn + round_btn12))
-                                            .shadow(color: selcolor5.opacity(shadow_opacity_1), radius: shadow2, x: 0, y: 0)
-                                    }
+                                    ButtonLoader(height_calc_button: $height_calc_button, width_calc_button: $width_calc_button, round_btn: $round_btn, selcolor4: $selcolor4, shadow_opacity_1: $shadow_opacity_1, shadow_pos_x: $shadow_pos_x, shadow_pos_y: $shadow_pos_y, shadow1: $shadow1, color_border: $color_border, rotate_btn: $rotate_btn, width_border: $width_border, selcolor: $selcolor, selcolor2: $selcolor2, selectedEmoji: $selectedEmoji, font_size2_1: $font_size2_1, xemo: $xemo, yemo: $yemo, symbol: symbol, font_size: $font_size, fontName: $fontName, round_btn12: $round_btn12, selcolor5: $selcolor5, shadow2: $shadow2)
                                 }
                                 .contentShape(Rectangle())
                                 .onDrag {
