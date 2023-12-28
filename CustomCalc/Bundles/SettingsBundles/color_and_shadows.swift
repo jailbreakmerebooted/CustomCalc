@@ -28,10 +28,11 @@ struct OtherCUSS: View {
     @Binding var font_size2_2: Int
     @Binding var xemo: CGFloat
     @Binding var yemo: CGFloat
+    @Binding var rotation: Double
     var body: some View {
         List {
             Section(header: Text("preview")) {
-                preview_box(width_calc_button: $width_calc_button, height_calc_button: $height_calc_button, selcolor: $selcolor, selcolor2: $selcolor2, selcolor3: $selcolor3, selcolor4: $selcolor4, round_btn: $round_btn, font_size: $font_size, shadow1: $shadow1, shadow_opacity_1: $shadow_opacity_1, shadow_pos_y: $shadow_pos_y, shadow_pos_x: $shadow_pos_x, width_border: $width_border, color_border: $color_border, rotate_btn: $rotate_btn, shadow2: $shadow2, selcolor5: $selcolor5, round_btn12: $round_btn12, fontName: $fontName, selectedEmoji: $selectedEmoji, font_size2_1: $font_size2_1, font_size2_2: $font_size2_2, xemo: $xemo, yemo: $yemo)
+                preview_box(width_calc_button: $width_calc_button, height_calc_button: $height_calc_button, selcolor: $selcolor, selcolor2: $selcolor2, selcolor3: $selcolor3, selcolor4: $selcolor4, round_btn: $round_btn, font_size: $font_size, shadow1: $shadow1, shadow_opacity_1: $shadow_opacity_1, shadow_pos_y: $shadow_pos_y, shadow_pos_x: $shadow_pos_x, width_border: $width_border, color_border: $color_border, rotate_btn: $rotate_btn, shadow2: $shadow2, selcolor5: $selcolor5, round_btn12: $round_btn12, fontName: $fontName, selectedEmoji: $selectedEmoji, font_size2_1: $font_size2_1, font_size2_2: $font_size2_2, xemo: $xemo, yemo: $yemo, rotation: $rotation)
             }
             .listRowBackground(selcolor3)
             Section(header: Text("Button Shadow")) {

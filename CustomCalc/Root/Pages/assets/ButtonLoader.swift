@@ -24,6 +24,7 @@ struct ButtonLoader: View {
     @Binding var round_btn12: CGFloat
     @Binding var selcolor5: Color
     @Binding var shadow2: CGFloat
+    @Binding var rotation: Double
     var body: some View {
         ZStack {
             Rectangle()
@@ -48,5 +49,9 @@ struct ButtonLoader: View {
                 .rotationEffect(Angle(degrees: rotate_btn + round_btn12))
                 .shadow(color: selcolor5.opacity(shadow_opacity_1), radius: shadow2, x: 0, y: 0)
         }
+        .rotation3DEffect(
+                        Angle(degrees: rotation),
+                        axis: (x: 0, y: 1, z: 0) // Rotate around the Y-axis
+                    )
     }
 }

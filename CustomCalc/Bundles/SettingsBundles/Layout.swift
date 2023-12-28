@@ -45,6 +45,7 @@ struct Layout: Codable, Identifiable, Equatable {
     var tab2: String?
     var tab3: String?
     var tab4: String?
+    var rotation: Double?
 }
 
 struct LayoutST: View {
@@ -126,6 +127,7 @@ struct LayoutST: View {
     @Binding var tabbar2: String
     @Binding var tabbar3: String
     @Binding var tabbar4: String
+    @Binding var rotation: Double
     
     //preview_vals
     @State private var h1: CGFloat = 0.0
@@ -605,7 +607,8 @@ struct LayoutST: View {
                             tab1: tabbar1,
                             tab2: tabbar2,
                             tab3: tabbar3,
-                            tab4: tabbar4)
+                            tab4: tabbar4,
+                            rotation: rotation)
         if let layoutData = try? JSONEncoder().encode(layout) {
             savedLayouts[layoutName] = try? JSONDecoder().decode(Layout.self, from: layoutData)
         }
@@ -651,6 +654,7 @@ struct LayoutST: View {
         tabbar2 = layout.tab2 ?? ""
         tabbar3 = layout.tab3 ?? ""
         tabbar4 = layout.tab4 ?? ""
+        rotation = layout.rotation ?? 0.0
     }
     func importLayout(layout: Layout) -> Data? {
         do {
@@ -805,6 +809,7 @@ struct LayoutST: View {
             tabbar2 = layout.tab2 ?? "clock.arrow.circlepath"
             tabbar3 = layout.tab3 ?? "pencil.and.outline"
             tabbar4 = layout.tab4 ?? "slider.horizontal.3"
+            rotation = layout.rotation ?? 0.0
         round_btn2 = Int(round_btn)
         font_size2 = Int(font_size)
         width_calc_button2 = Int(width_calc_button)
