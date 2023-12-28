@@ -150,38 +150,85 @@ struct SymbolEditorView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
                             Button(action: {
-                                symbols = defaultSymbols
-                                UserDefaults.standard.set(symbols, forKey: "Symbols")
+                                addUniqueSymbols(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "."])
                             }){
                                 ZStack {
                                     Rectangle()
                                         .frame(width: 125, height: 50)
                                         .cornerRadius(10)
-                                    Text("Add")
+                                    Text("Foundation")
                                         .foregroundColor(.primary)
                                         .font(.system(size: 12))
                                 }
                             }
                             Button(action: {
-                                addUniqueSymbols([""])
+                                addUniqueSymbols(["=", "-", "+", "×", "÷", "AC"])
                             }){
                                 ZStack {
                                     Rectangle()
                                         .frame(width: 125, height: 50)
                                         .cornerRadius(10)
-                                    Text("Add Symbol")
+                                    Text("Operations")
                                         .foregroundColor(.primary)
                                         .font(.system(size: 12))
                                 }
                             }
                             Button(action: {
-                                symbols = []
+                                addUniqueSymbols(["sin", "cos", "tan", "sin⁻¹", "cos⁻¹", "tan⁻¹"])
                             }){
                                 ZStack {
                                     Rectangle()
                                         .frame(width: 125, height: 50)
                                         .cornerRadius(10)
-                                    Text("Delete all symbols")
+                                    Text("Trigonometry")
+                                        .foregroundColor(.primary)
+                                        .font(.system(size: 12))
+                                }
+                            }
+                            Button(action: {
+                                addUniqueSymbols(["π"])
+                            }){
+                                ZStack {
+                                    Rectangle()
+                                        .frame(width: 125, height: 50)
+                                        .cornerRadius(10)
+                                    Text("Pi")
+                                        .foregroundColor(.primary)
+                                        .font(.system(size: 12))
+                                }
+                            }
+                            Button(action: {
+                                addUniqueSymbols(["√"])
+                            }){
+                                ZStack {
+                                    Rectangle()
+                                        .frame(width: 125, height: 50)
+                                        .cornerRadius(10)
+                                    Text("Root")
+                                        .foregroundColor(.primary)
+                                        .font(.system(size: 12))
+                                }
+                            }
+                            Button(action: {
+                                addUniqueSymbols(["%"])
+                            }){
+                                ZStack {
+                                    Rectangle()
+                                        .frame(width: 125, height: 50)
+                                        .cornerRadius(10)
+                                    Text("Percentage")
+                                        .foregroundColor(.primary)
+                                        .font(.system(size: 12))
+                                }
+                            }
+                            Button(action: {
+                                addUniqueSymbols(["Rand"])
+                            }){
+                                ZStack {
+                                    Rectangle()
+                                        .frame(width: 125, height: 50)
+                                        .cornerRadius(10)
+                                    Text("Randomizer")
                                         .foregroundColor(.primary)
                                         .font(.system(size: 12))
                                 }
@@ -202,34 +249,6 @@ struct SymbolEditorView: View {
                     .onMove { source, destination in
                         symbols.move(fromOffsets: source, toOffset: destination)
                         UserDefaults.standard.set(symbols, forKey: "Symbols")
-                    }
-                }
-                if editMode == .inactive {
-                    Section {
-                        Button("Add Normal Operations", action: {
-                            addUniqueSymbols(["=", "-", "+", "×", "÷", "AC"])
-                        })
-                        .frame(height: 125)
-                        Button("Add trigonometry functions", action: {
-                            addUniqueSymbols(["sin", "cos", "tan", "sin⁻¹", "cos⁻¹", "tan⁻¹"])
-                        })
-                        .frame(height: 125)
-                        Button("Add π", action: {
-                            addUniqueSymbols(["π"])
-                        })
-                        .frame(height: 125)
-                        Button("Add √", action: {
-                            addUniqueSymbols(["√"])
-                        })
-                        .frame(height: 125)
-                        Button("Add %", action: {
-                            addUniqueSymbols(["%"])
-                        })
-                        .frame(height: 125)
-                        Button("Add Rand", action: {
-                            addUniqueSymbols(["Rand"])
-                        })
-                        .frame(height: 125)
                     }
                 }
             }
