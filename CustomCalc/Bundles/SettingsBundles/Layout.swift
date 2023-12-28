@@ -169,6 +169,7 @@ struct LayoutST: View {
     @State private var h21: String = ""
     @State private var h22: [String] = []
     @State private var h23: String = ""
+    @State private var h24: Double = 0.0
     
     @State private var keycolor: Color = Color.blue
     var body: some View {
@@ -338,7 +339,7 @@ struct LayoutST: View {
                                             ZStack {
                                                 Rectangle()
                                                     .foregroundColor(cs3)
-                                                    .frame(width: 350, height: 250)
+                                                    .frame(width: 350, height: 200)
                                                     .cornerRadius(20)
                                                     .animation(.spring())
                                                 ZStack {
@@ -364,6 +365,10 @@ struct LayoutST: View {
                                                         .rotationEffect(Angle(degrees: h6 + h5))
                                                         .shadow(color: cs6.opacity(h14), radius: h11, x: 0, y: 0)
                                                 }
+                                                .rotation3DEffect(
+                                                                Angle(degrees: h24),
+                                                                axis: (x: 0, y: 1, z: 0) // Rotate around the Y-axis
+                                                            )
                                             }
                                         }
                                     }
@@ -715,6 +720,7 @@ struct LayoutST: View {
         h19 = layout.fontname ?? ""
         h21 = layout.layoutname ?? "Unknown"
         h22 = layout.symbols ?? []
+        h24 = layout.rotation ?? 0.0
         
         c1 = layout.color1 ?? ""
         c2 = layout.color2 ?? ""
