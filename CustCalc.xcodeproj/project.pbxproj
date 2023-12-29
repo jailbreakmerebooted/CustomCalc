@@ -172,9 +172,9 @@
 				A7ECDF482A0E6F6900B448FC /* CustomCalcApp.swift */,
 				A7ECDF762A0E905A00B448FC /* RootView.swift */,
 				EFFE953E2B3A3F9A00B25366 /* License.swift */,
-				A75AD05A2A11615F00186C35 /* Pages */,
 				82EA1FBA2B3DE64500A4A48C /* ImportTheme.swift */,
 				82EA1FBC2B3DE68D00A4A48C /* ExportTheme.swift */,
+				A75AD05A2A11615F00186C35 /* Pages */,
 			);
 			path = Root;
 			sourceTree = "<group>";

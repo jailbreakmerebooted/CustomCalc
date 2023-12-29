@@ -256,28 +256,6 @@ struct Calculator: View {
             .onAppear {
                 print(Update_fix0_5)
                 print(used2)
-                if Update_fix0_5 == true {
-                    width_border = 10
-                    width_calc_button = 75
-                    height_calc_button = 75
-                    spacing_grid_ver = 350
-                    spacing_grid_hor = 10
-                    width_output_box = 350
-                    height_output_box = 75
-                    shadow1 = 5
-                    rotate_btn = 0
-                    round_btn12 = 0
-                    font_size = 20
-                    font_size3 = 20
-                    selcolor = Color.gray
-                    selcolor2 = Color.white
-                    selcolor3 = Color.gray
-                    selcolor4 = Color.red
-                    selcolor5 = Color.black
-                    color_border = Color.red
-                    Update_fix0_5 = false
-                    used2 = true
-                }
                 if used2 == true {
                     round_btn2 = Int(round_btn)
                     font_size2 = Int(font_size)
