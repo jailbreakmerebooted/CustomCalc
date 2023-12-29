@@ -515,6 +515,20 @@ struct LayoutST: View {
             print("Error importing layout: \(error)")
         }
     }
+    func readFileFromDocumentsDirectory() {
+        let fileName = "example.txt"
+        
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let fileURL = dir.appendingPathComponent(fileName)
+            
+            do {
+                let contents = try String(contentsOf: fileURL, encoding: .utf8)
+                print(contents)
+            } catch {
+                print("Error reading file: \(error)")
+            }
+        }
+    }
     private func exportLayout(_ layout: Layout) {
         do {
             let layoutData = try JSONEncoder().encode(layout)
