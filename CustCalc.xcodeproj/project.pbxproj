@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		350D920E2B38BE09001B9318 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D920D2B38BE09001B9318 /* Calculator.swift */; };
 		350D92102B38BE26001B9318 /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350D920F2B38BE26001B9318 /* Credits.swift */; };
-		82EA1FBB2B3DE64600A4A48C /* ImportTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EA1FBA2B3DE64500A4A48C /* ImportTheme.swift */; };
-		82EA1FBD2B3DE68D00A4A48C /* ExportTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EA1FBC2B3DE68D00A4A48C /* ExportTheme.swift */; };
 		A7318FF82A19438300E85289 /* upper_box.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7318FF72A19438300E85289 /* upper_box.swift */; };
 		A7361F0C2A1BC64000DB4455 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7361F0E2A1BC64000DB4455 /* Localizable.strings */; };
 		A75809252A0F514800EC04EA /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75809242A0F514800EC04EA /* Notes.swift */; };
@@ -33,6 +31,7 @@
 		B5D621FC2A2431C100556527 /* arg.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D621FB2A2431C100556527 /* arg.swift */; };
 		B5D621FE2A24C6A500556527 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D621FD2A24C6A400556527 /* History.swift */; };
 		B5ECC7602A2A22C700DD54E1 /* notest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ECC75F2A2A22C700DD54E1 /* notest.swift */; };
+		EF63C3852B3F190400184D7C /* color_preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63C3842B3F190400184D7C /* color_preview.swift */; };
 		EFA96E0E2B3CF2D90063C850 /* ButtonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA96E0D2B3CF2D90063C850 /* ButtonLoader.swift */; };
 		EFFE953C2B3A3A6A00B25366 /* preview_box.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFE953B2B3A3A6A00B25366 /* preview_box.swift */; };
 		EFFE953F2B3A3F9A00B25366 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFE953E2B3A3F9A00B25366 /* License.swift */; };
@@ -88,8 +87,6 @@
 /* Begin PBXFileReference section */
 		350D920D2B38BE09001B9318 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = SOURCE_ROOT; };
 		350D920F2B38BE26001B9318 /* Credits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credits.swift; sourceTree = SOURCE_ROOT; };
-		82EA1FBA2B3DE64500A4A48C /* ImportTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTheme.swift; sourceTree = "<group>"; };
-		82EA1FBC2B3DE68D00A4A48C /* ExportTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportTheme.swift; sourceTree = "<group>"; };
 		A7318FF72A19438300E85289 /* upper_box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upper_box.swift; sourceTree = "<group>"; };
 		A7361F0D2A1BC64000DB4455 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A7361F112A1BD01F00DB4455 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -123,6 +120,7 @@
 		B5D621FB2A2431C100556527 /* arg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arg.swift; sourceTree = "<group>"; };
 		B5D621FD2A24C6A400556527 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		B5ECC75F2A2A22C700DD54E1 /* notest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notest.swift; sourceTree = "<group>"; };
+		EF63C3842B3F190400184D7C /* color_preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = color_preview.swift; sourceTree = "<group>"; };
 		EFA96E0D2B3CF2D90063C850 /* ButtonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLoader.swift; sourceTree = "<group>"; };
 		EFFE953B2B3A3A6A00B25366 /* preview_box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = preview_box.swift; sourceTree = "<group>"; };
 		EFFE953E2B3A3F9A00B25366 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
@@ -172,8 +170,6 @@
 				A7ECDF482A0E6F6900B448FC /* CustomCalcApp.swift */,
 				A7ECDF762A0E905A00B448FC /* RootView.swift */,
 				EFFE953E2B3A3F9A00B25366 /* License.swift */,
-				82EA1FBA2B3DE64500A4A48C /* ImportTheme.swift */,
-				82EA1FBC2B3DE68D00A4A48C /* ExportTheme.swift */,
 				A75AD05A2A11615F00186C35 /* Pages */,
 			);
 			path = Root;
@@ -294,6 +290,7 @@
 			children = (
 				EFFE953B2B3A3A6A00B25366 /* preview_box.swift */,
 				B5D621F62A23C68F00556527 /* EmojiPicker.swift */,
+				EF63C3842B3F190400184D7C /* color_preview.swift */,
 			);
 			path = assets;
 			sourceTree = "<group>";
@@ -444,14 +441,13 @@
 				A7318FF82A19438300E85289 /* upper_box.swift in Sources */,
 				EFFE953C2B3A3A6A00B25366 /* preview_box.swift in Sources */,
 				B5D621FE2A24C6A500556527 /* History.swift in Sources */,
+				EF63C3852B3F190400184D7C /* color_preview.swift in Sources */,
 				EFA96E0E2B3CF2D90063C850 /* ButtonLoader.swift in Sources */,
-				82EA1FBD2B3DE68D00A4A48C /* ExportTheme.swift in Sources */,
 				B5D621FA2A23FE1500556527 /* Gesture.swift in Sources */,
 				A78D58332A13EA5700C300C1 /* Haptic+Sound.swift in Sources */,
 				B5D621F72A23C68F00556527 /* EmojiPicker.swift in Sources */,
 				A7ECDF7D2A0E974E00B448FC /* SettingsUI.swift in Sources */,
 				A75FECC92A1283BE008F51D6 /* shape.swift in Sources */,
-				82EA1FBB2B3DE64600A4A48C /* ImportTheme.swift in Sources */,
 				A75F51BB2A10E7280072A254 /* GridSettings.swift in Sources */,
 				EFFE953F2B3A3F9A00B25366 /* License.swift in Sources */,
 				A7ECDF752A0E8E2800B448FC /* color_and_shadows.swift in Sources */,
