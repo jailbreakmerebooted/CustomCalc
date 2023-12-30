@@ -46,6 +46,7 @@ struct Layout: Codable, Identifiable, Equatable {
     var tab3: String?
     var tab4: String?
     var rotation: Double?
+    var fontName2: String?
 }
 
 struct LayoutST: View {
@@ -128,6 +129,7 @@ struct LayoutST: View {
     @Binding var tabbar3: String
     @Binding var tabbar4: String
     @Binding var rotation: Double
+    @Binding var fontName2: String
     
     //preview_vals
     @State private var h1: CGFloat = 0.0
@@ -170,6 +172,10 @@ struct LayoutST: View {
     @State private var h22: [String] = []
     @State private var h23: String = ""
     @State private var h24: Double = 0.0
+    @State private var h25: String = "Gill Sans"
+    @State private var h26: String = "Gill Sans"
+    @State private var h27: Int = 0
+    @State private var h28: Int = 0
     
     @State private var keycolor: Color = Color.blue
     var body: some View {
@@ -376,9 +382,19 @@ struct LayoutST: View {
                         }
                     }
                     .listRowBackground(cs3)
-                    Section(header: Text("Info")) {
+                    Section(header: Text("Main")) {
                         Text("Name: \(h21)")
+                        Text("Grid: \(h28) x \(h27)")
                         Text("Symbols in grid: \(h23)")
+                    }
+                    Section(header: Text("Color")) {
+                        color_preview(text: "Background", color: $cs3)
+                        color_preview(text: "Module Background", color: $cs1)
+                        color_preview(text: "Text", color: $cs2)
+                        color_preview(text: "Text Shadow", color: $cs6)
+                        color_preview(text: "Shadow", color: $cs4)
+                        color_preview(text: "Border", color: $cs5)
+                        color_preview(text: "UI", color: $uicolor)
                     }
                     .onAppear {
                                             let joinedSymbols = h22.joined(separator: ", ")
@@ -627,7 +643,8 @@ struct LayoutST: View {
                             tab2: tabbar2,
                             tab3: tabbar3,
                             tab4: tabbar4,
-                            rotation: rotation)
+                            rotation: rotation,
+                            fontName2: fontName2)
         if let layoutData = try? JSONEncoder().encode(layout) {
             savedLayouts[layoutName] = try? JSONDecoder().decode(Layout.self, from: layoutData)
         }
@@ -674,6 +691,7 @@ struct LayoutST: View {
         tabbar3 = layout.tab3 ?? ""
         tabbar4 = layout.tab4 ?? ""
         rotation = layout.rotation ?? 0.0
+        fontName2 = layout.fontName2 ?? "Gill Sans"
     }
     func importLayout(layout: Layout) -> Data? {
         do {
@@ -735,6 +753,10 @@ struct LayoutST: View {
         h21 = layout.layoutname ?? "Unknown"
         h22 = layout.symbols ?? []
         h24 = layout.rotation ?? 0.0
+        h25 = layout.fontname ?? "Gill Sans"
+        h26 = layout.fontName2 ?? "Gill Sans"
+        h27 = layout.grid_count ?? 0
+        h28 = calculateRowCount(spacesInRow: h27, totalSpaces: h22.count)
         
         c1 = layout.color1 ?? ""
         c2 = layout.color2 ?? ""
@@ -857,7 +879,17 @@ struct LayoutST: View {
         // Update other variables with the corresponding values from the layout
         // ...
     }
-    
+    func calculateRowCount(spacesInRow: Int, totalSpaces: Int) -> Int {
+        guard spacesInRow > 0 && totalSpaces > 0 else {
+            // Handle invalid input
+            return 0
+        }
+
+        let rowCount = totalSpaces / spacesInRow
+        let remainingSpaces = totalSpaces % spacesInRow
+
+        return rowCount + (remainingSpaces > 0 ? 1 : 0)
+    }
     private func deleteLayouts(at offsets: IndexSet) {
         let indicesToRemove = Array(offsets)
         let layoutKeys = savedLayouts.keys.sorted()

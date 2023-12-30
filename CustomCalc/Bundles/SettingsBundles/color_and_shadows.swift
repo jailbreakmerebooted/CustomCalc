@@ -71,7 +71,7 @@ struct OtherCUSS: View {
                 ColorPicker("Text Shadow", selection: $selcolor5)
                 ColorPicker("Shadow", selection: $selcolor4)
                 ColorPicker("Border", selection: $color_border)
-                ColorPicker("UIColor", selection: $uicolor)
+                ColorPicker("UI", selection: $uicolor)
             }
         }
         .navigationTitle("Color and Shadows")
